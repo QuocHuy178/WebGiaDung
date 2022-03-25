@@ -1,7 +1,7 @@
 <%@page import="giadung.common.Common"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@include file="/WEB-INF/views/layouts/user/tablib.jsp"%>  
 
 <title>Trang chủ</title>
 <body>
@@ -23,90 +23,41 @@
 								<div class="carousel-inner">
 									<div class="item active">
 										<ul class="thumbnails">
+										<c:forEach var="item" items="${ products }" varStatus="index">
 											<li class="span3">
 												<div class="thumbnail">
 													<i class="tag"></i> <a href="product_details.php"><img
-														src="themes/images/products/b1.jpg" alt=""></a>
+														src="themes/images/products/${ item.image }" alt=""></a>
 													<div class="caption">
-														<h5>Giày</h5>
+														<h5>${ item.name }</h5>
 														<h4 class="text-center flex-column">
-															<span class="pull-right text-warning">$222.00</span> <a
-																class="btn btn-success" href="product_details.php">Xem</a>
-														</h4>
-													</div>
-												</div>
-											</li>
-											<li class="span3">
-												<div class="thumbnail">
-													<i class="tag"></i> <a href="product_details.php"><img
-														src="themes/images/products/b1.jpg" alt=""></a>
-													<div class="caption">
-														<h5>Giày</h5>
-														<h4 class="text-center flex-column">
-															<span class="pull-right text-warning">$222.00</span> <a
-																class="btn btn-success" href="product_details.php">Xem</a>
-														</h4>
-													</div>
-												</div>
-											</li>
-											<li class="span3">
-												<div class="thumbnail">
-													<i class="tag"></i> <a href="product_details.php"><img
-														src="themes/images/products/b1.jpg" alt=""></a>
-													<div class="caption">
-														<h5>Giày</h5>
-														<h4 class="text-center flex-column">
-															<span class="pull-right text-warning">$222.00</span> <a
-																class="btn btn-success" href="product_details.php">Xem</a>
-														</h4>
-													</div>
-												</div>
-											</li>
-											<li class="span3">
-												<div class="thumbnail">
-													<i class="tag"></i> <a href="product_details.php"><img
-														src="themes/images/products/b1.jpg" alt=""></a>
-													<div class="caption">
-														<h5>Giày</h5>
-														<h4 class="text-center flex-column">
-															<span class="pull-right text-warning">$222.00</span> <a
+															<span class="pull-right text-warning"> <fmt:formatNumber type="number" groupingUsed="true" value="${ item.price }" />	 ₫</span> <a
 																class="btn btn-success" href="product_details.php">Xem</a>
 														</h4>
 													</div>
 												</div>
 											</li>
 
-
+										</c:forEach>
 										</ul>
 									</div>
 									<div class="item">
 										<ul class="thumbnails">
+										<c:forEach var="item" items="${ productshot }" varStatus="index">
 											<li class="span3">
 												<div class="thumbnail">
 													<i class="tag"></i> <a href="product_details.php"><img
-														src="themes/images/products/b1.jpg" alt=""></a>
+														src="themes/images/products/${ item.image }" alt=""></a>
 													<div class="caption">
-														<h5>Giày</h5>
+														<h5>${ item.name }</h5>
 														<h4 class="text-center flex-column">
-															<span class="pull-right text-warning">$222.00</span> <a
+															<span class="pull-right text-warning"><fmt:formatNumber type="number" groupingUsed="true" value="${ item.price }" />	 ₫</span> <a
 																class="btn btn-success" href="product_details.php">Xem</a>
 														</h4>
 													</div>
 												</div>
 											</li>
-											<li class="span3">
-												<div class="thumbnail">
-													<i class="tag"></i> <a href="product_details.php"><img
-														src="themes/images/products/b1.jpg" alt=""></a>
-													<div class="caption">
-														<h5>Giày</h5>
-														<h4 class="text-center flex-column">
-															<span class="pull-right text-warning">$222.00</span> <a
-																class="btn btn-success" href="product_details.php">Xem</a>
-														</h4>
-													</div>
-												</div>
-											</li>
+										</c:forEach>
 										</ul>
 									</div>
 									
@@ -120,18 +71,18 @@
 					</div>
 					<h4>Sản phẩm mới nhất</h4>
 					<ul class="thumbnails">
-						
+						<c:forEach var="item" items="${ products }" varStatus="index">
 							<li class="span3">
 								<div class="thumbnail">
 									<a href="product_details.php"> <img
-										src="<%=Common.path%>themes/images/products/1.jpg"
+										src="<%=Common.path%>themes/images/products/"
 										alt="products" /></a>
 									<div class="caption">
-										<h5>a</h5>
-										<p>a</p>
+										<h5>${ item.name }</h5>
+										<p>${ item.description }</p>
 
 										<h4 style="text-align: center">
-											<div class="text-error" href="#">$222.00</div>
+											<div class="text-error" href="#"></div>
 											<a class="btn btn-warning" href="product_details.php"> <i
 												class="icon-zoom-in"></i>
 											</a> <a class="btn btn-primary" href="#">Thêm vào <i
@@ -141,7 +92,7 @@
 									</div>
 								</div>
 							</li>
-					
+					</c:forEach>
 					</ul>
 				</div>
 			</div>

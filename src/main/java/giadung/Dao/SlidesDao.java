@@ -13,9 +13,7 @@ import giadung.Entity.MapperSlides;
 import giadung.Entity.Slides;
 
 @Repository				
-public class SlidesDao {
-	@Autowired
-	public JdbcTemplate _jdbcTemplate;
+public class SlidesDao extends BaseDao{
 	public List<Slides>GetDataSlide(){
 		List<Slides> list = new ArrayList<Slides>();
 		String sql = "SELECT * FROM slides" ;

@@ -1,12 +1,12 @@
-package giadung.Entity;
+package giadung.Dto;
 
 import java.util.Date;
 
-public class Products {
+public class ProductsDto {
 	private long id;
-	private int id_Category;
+	private int id_category;
 	private String name;
-	private Double price;
+	private double price;
 	private String image;
 	private String description;
 	private boolean hot_product;
@@ -14,11 +14,11 @@ public class Products {
 	private Date create_date;
 	private Date update_date;
 
-	public Products(long id, int id_Category, String name, Double price, String image, String description,
+	public ProductsDto(long id, int id_category, String name, double price, String image, String description,
 			boolean hot_product, boolean new_product, Date create_date, Date update_date) {
 		super();
 		this.id = id;
-		this.id_Category = id_Category;
+		this.id_category = id_category;
 		this.name = name;
 		this.price = price;
 		this.image = image;
@@ -37,12 +37,12 @@ public class Products {
 		this.id = id;
 	}
 
-	public int getId_Category() {
-		return id_Category;
+	public int getId_category() {
+		return id_category;
 	}
 
-	public void setId_Category(int id_Category) {
-		this.id_Category = id_Category;
+	public void setId_category(int id_category) {
+		this.id_category = id_category;
 	}
 
 	public String getName() {
@@ -53,11 +53,11 @@ public class Products {
 		this.name = name;
 	}
 
-	public Double getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
-	public void setPrice(Double price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 
@@ -109,9 +109,8 @@ public class Products {
 		this.update_date = update_date;
 	}
 
-	public Products() {
+	public ProductsDto() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
-
-	
 }

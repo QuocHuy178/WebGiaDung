@@ -8,16 +8,16 @@ import org.springframework.web.servlet.ModelAndView;
 import giadung.Service.User.HomeServiceImpl;
 
 @Controller
-public class HomeController {
-	@Autowired
-	HomeServiceImpl HomeService;
-
+public class HomeController extends BaseController {
+	
 	@RequestMapping(value = { "/", "/home" })
-	public ModelAndView getSlides() {
-		ModelAndView mv = new ModelAndView("user/index");
-		mv.addObject("slides", HomeService.GetDataSlide());
-		mv.addObject("cates", HomeService.getDataCategories());
-		return mv;
+	public ModelAndView Index() {
+		_mvShare.addObject("slides", _homeService.GetDataSlide());
+		_mvShare.addObject("cates", _homeService.getDataCategories());
+		_mvShare.addObject("products", _homeService.getDataProductsHot());
+		_mvShare.addObject("productshot", _homeService.getDataProductsHotLast());
+		_mvShare.setViewName("user/index");
+		return _mvShare;
 	}
 
 	@RequestMapping("/product")

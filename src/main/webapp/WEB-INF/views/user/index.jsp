@@ -120,15 +120,15 @@
 					</div>
 					<h4>Sản phẩm mới nhất</h4>
 					<ul class="thumbnails">
-						<c:forEach var="item" items="${ slides }" varStatus="index">
+						
 							<li class="span3">
 								<div class="thumbnail">
 									<a href="product_details.php"> <img
-										src="<%=Common.path%>themes/images/products/${item.img}"
+										src="<%=Common.path%>themes/images/products/1.jpg"
 										alt="products" /></a>
 									<div class="caption">
-										<h5>${item.caption}</h5>
-										<p>${item.content}</p>
+										<h5>a</h5>
+										<p>a</p>
 
 										<h4 style="text-align: center">
 											<div class="text-error" href="#">$222.00</div>
@@ -141,7 +141,7 @@
 									</div>
 								</div>
 							</li>
-						</c:forEach>
+					
 					</ul>
 				</div>
 			</div>

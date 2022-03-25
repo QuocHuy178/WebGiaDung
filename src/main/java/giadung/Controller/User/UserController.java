@@ -14,10 +14,16 @@ public class UserController {
 	@Autowired
 	HomeServiceImpl HomeService;
 	
-	@RequestMapping(value= {"/","/trang-chu"})
-	public ModelAndView  Index() {
-		ModelAndView mv = new ModelAndView("/user/index");
+	@RequestMapping(value= {"/","/home"})
+	public ModelAndView  getSlides() {
+		ModelAndView mv = new ModelAndView("user/index");
 		mv.addObject("slides",HomeService.GetDataSlide());
+		return mv;
+	}
+	
+	@RequestMapping("/product")
+	public ModelAndView product() {
+		ModelAndView mv = new ModelAndView("user/product");
 		return mv;
 	}
 }

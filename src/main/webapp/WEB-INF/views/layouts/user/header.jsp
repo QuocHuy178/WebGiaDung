@@ -39,7 +39,7 @@
 						kiếm</button>
 				</form>
 				<ul id="topMenu" class="nav pull-right">
-					<li class=""><a href="special_offer.php">Đặc biệt</a></li>
+					<li class=""><a href="product">Sản phẩm</a></li>
 					<li class=""><a href="normal.php">Đặt hàng</a></li>
 					<li class=""><a href="contact.php">Liên hệ</a></li>
 					<li class=""><a href="#login" role="button"

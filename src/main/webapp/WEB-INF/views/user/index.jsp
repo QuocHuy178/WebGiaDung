@@ -29,9 +29,9 @@
 														src="themes/images/products/b1.jpg" alt=""></a>
 													<div class="caption">
 														<h5>Giày</h5>
-														<h4>
-															<a class="btn" href="product_details.php">Xem</a> <span
-																class="pull-right">$222.00</span>
+														<h4 class="text-center flex-column">
+															<span class="pull-right text-warning">$222.00</span> <a
+																class="btn btn-success" href="product_details.php">Xem</a>
 														</h4>
 													</div>
 												</div>
@@ -39,12 +39,12 @@
 											<li class="span3">
 												<div class="thumbnail">
 													<i class="tag"></i> <a href="product_details.php"><img
-														src="themes/images/products/b2.jpg" alt=""></a>
+														src="themes/images/products/b1.jpg" alt=""></a>
 													<div class="caption">
-														<h5>Giay</h5>
-														<h4>
-															<a class="btn" href="product_details.php">Xem</a> <span
-																class="pull-right">$222.00</span>
+														<h5>Giày</h5>
+														<h4 class="text-center flex-column">
+															<span class="pull-right text-warning">$222.00</span> <a
+																class="btn btn-success" href="product_details.php">Xem</a>
 														</h4>
 													</div>
 												</div>
@@ -52,12 +52,12 @@
 											<li class="span3">
 												<div class="thumbnail">
 													<i class="tag"></i> <a href="product_details.php"><img
-														src="themes/images/products/b3.jpg" alt=""></a>
+														src="themes/images/products/b1.jpg" alt=""></a>
 													<div class="caption">
-														<h5>Giay</h5>
-														<h4>
-															<a class="btn" href="product_details.php">Xem</a> <span
-																class="pull-right">$222.00</span>
+														<h5>Giày</h5>
+														<h4 class="text-center flex-column">
+															<span class="pull-right text-warning">$222.00</span> <a
+																class="btn btn-success" href="product_details.php">Xem</a>
 														</h4>
 													</div>
 												</div>
@@ -65,16 +65,18 @@
 											<li class="span3">
 												<div class="thumbnail">
 													<i class="tag"></i> <a href="product_details.php"><img
-														src="themes/images/products/b4.jpg" alt=""></a>
+														src="themes/images/products/b1.jpg" alt=""></a>
 													<div class="caption">
-														<h5>Giay</h5>
-														<h4>
-															<a class="btn" href="product_details.php">Xem</a> <span
-																class="pull-right">$222.00</span>
+														<h5>Giày</h5>
+														<h4 class="text-center flex-column">
+															<span class="pull-right text-warning">$222.00</span> <a
+																class="btn btn-success" href="product_details.php">Xem</a>
 														</h4>
 													</div>
 												</div>
 											</li>
+
+
 										</ul>
 									</div>
 									<div class="item">
@@ -82,12 +84,12 @@
 											<li class="span3">
 												<div class="thumbnail">
 													<i class="tag"></i> <a href="product_details.php"><img
-														src="themes/images/products/5.jpg" alt=""></a>
+														src="themes/images/products/b1.jpg" alt=""></a>
 													<div class="caption">
-														<h5>Giay</h5>
-														<h4>
-															<a class="btn" href="product_details.php">Xem</a> <span
-																class="pull-right">$222.00</span>
+														<h5>Giày</h5>
+														<h4 class="text-center flex-column">
+															<span class="pull-right text-warning">$222.00</span> <a
+																class="btn btn-success" href="product_details.php">Xem</a>
 														</h4>
 													</div>
 												</div>
@@ -95,156 +97,20 @@
 											<li class="span3">
 												<div class="thumbnail">
 													<i class="tag"></i> <a href="product_details.php"><img
-														src="themes/images/products/6.jpg" alt=""></a>
+														src="themes/images/products/b1.jpg" alt=""></a>
 													<div class="caption">
-														<h5>Giay</h5>
-														<h4>
-															<a class="btn" href="product_details.php">Xem</a> <span
-																class="pull-right">$222.00</span>
-														</h4>
-													</div>
-												</div>
-											</li>
-											<li class="span3">
-												<div class="thumbnail">
-													<a href="product_details.php"><img
-														src="themes/images/products/7.jpg" alt=""></a>
-													<div class="caption">
-														<h5>Giay</h5>
-														<h4>
-															<a class="btn" href="product_details.php">Xem</a> <span
-																class="pull-right">$222.00</span>
-														</h4>
-													</div>
-												</div>
-											</li>
-											<li class="span3">
-												<div class="thumbnail">
-													<a href="product_details.php"><img
-														src="themes/images/products/8.jpg" alt=""></a>
-													<div class="caption">
-														<h5>Giay</h5>
-														<h4>
-															<a class="btn" href="product_details.php">Xem</a> <span
-																class="pull-right">$222.00</span>
+														<h5>Giày</h5>
+														<h4 class="text-center flex-column">
+															<span class="pull-right text-warning">$222.00</span> <a
+																class="btn btn-success" href="product_details.php">Xem</a>
 														</h4>
 													</div>
 												</div>
 											</li>
 										</ul>
 									</div>
-									<div class="item">
-										<ul class="thumbnails">
-											<li class="span3">
-												<div class="thumbnail">
-													<a href="product_details.php"><img
-														src="themes/images/products/9.jpg" alt=""></a>
-													<div class="caption">
-														<h5>Giay</h5>
-														<h4>
-															<a class="btn" href="product_details.php">Xem</a> <span
-																class="pull-right">$222.00</span>
-														</h4>
-													</div>
-												</div>
-											</li>
-											<li class="span3">
-												<div class="thumbnail">
-													<a href="product_details.php"><img
-														src="themes/images/products/10.jpg" alt=""></a>
-													<div class="caption">
-														<h5>Giay</h5>
-														<h4>
-															<a class="btn" href="product_details.php">Xem</a> <span
-																class="pull-right">$222.00</span>
-														</h4>
-													</div>
-												</div>
-											</li>
-											<li class="span3">
-												<div class="thumbnail">
-													<a href="product_details.php"><img
-														src="themes/images/products/11.jpg" alt=""></a>
-													<div class="caption">
-														<h5>Giay</h5>
-														<h4>
-															<a class="btn" href="product_details.php">Xem</a> <span
-																class="pull-right">$222.00</span>
-														</h4>
-													</div>
-												</div>
-											</li>
-											<li class="span3">
-												<div class="thumbnail">
-													<a href="product_details.php"><img
-														src="themes/images/products/1.jpg" alt=""></a>
-													<div class="caption">
-														<h5>Giay</h5>
-														<h4>
-															<a class="btn" href="product_details.php">Xem</a> <span
-																class="pull-right">$222.00</span>
-														</h4>
-													</div>
-												</div>
-											</li>
-										</ul>
-									</div>
-									<div class="item">
-										<ul class="thumbnails">
-											<li class="span3">
-												<div class="thumbnail">
-													<a href="product_details.php"><img
-														src="themes/images/products/2.jpg" alt=""></a>
-													<div class="caption">
-														<h5>Giay</h5>
-														<h4>
-															<a class="btn" href="product_details.php">Xem</a> <span
-																class="pull-right">$222.00</span>
-														</h4>
-													</div>
-												</div>
-											</li>
-											<li class="span3">
-												<div class="thumbnail">
-													<a href="product_details.php"><img
-														src="themes/images/products/3.jpg" alt=""></a>
-													<div class="caption">
-														<h5>Giay</h5>
-														<h4>
-															<a class="btn" href="product_details.php">Xem</a> <span
-																class="pull-right">$222.00</span>
-														</h4>
-													</div>
-												</div>
-											</li>
-											<li class="span3">
-												<div class="thumbnail">
-													<a href="product_details.php"><img
-														src="themes/images/products/4.jpg" alt=""></a>
-													<div class="caption">
-														<h5>Giay</h5>
-														<h4>
-															<a class="btn" href="product_details.php">Xem</a> <span
-																class="pull-right">$222.00</span>
-														</h4>
-													</div>
-												</div>
-											</li>
-											<li class="span3">
-												<div class="thumbnail">
-													<a href="product_details.php"><img
-														src="themes/images/products/5.jpg" alt=""></a>
-													<div class="caption">
-														<h5>Giay</h5>
-														<h4>
-															<a class="btn" href="product_details.php">Xem</a> <span
-																class="pull-right">$222.00</span>
-														</h4>
-													</div>
-												</div>
-											</li>
-										</ul>
-									</div>
+									
+									
 								</div>
 								<a class="left carousel-control" href="#featured"
 									data-slide="prev">‹</a> <a class="right carousel-control"
@@ -257,17 +123,20 @@
 						<c:forEach var="item" items="${ slides }" varStatus="index">
 							<li class="span3">
 								<div class="thumbnail">
-									<a href="product_details.php">
-									<img src="<%=Common.path%>themes/images/products/${item.img}" alt="products" /></a>
+									<a href="product_details.php"> <img
+										src="<%=Common.path%>themes/images/products/${item.img}"
+										alt="products" /></a>
 									<div class="caption">
 										<h5>${item.caption}</h5>
 										<p>${item.content}</p>
 
 										<h4 style="text-align: center">
-											<a class="btn" href="product_details.php"> <i
-												class="icon-zoom-in"></i></a> <a class="btn" href="#">Thêm
-												vào <i class="icon-shopping-cart"></i>
-											</a> <a class="btn btn-primary" href="#">$222.00</a>
+											<div class="text-error" href="#">$222.00</div>
+											<a class="btn btn-warning" href="product_details.php"> <i
+												class="icon-zoom-in"></i>
+											</a> <a class="btn btn-primary" href="#">Thêm vào <i
+												class="icon-shopping-cart"></i>
+											</a>
 										</h4>
 									</div>
 								</div>

@@ -25,7 +25,8 @@
 <!-- Bootstrap style -->
 <link id="callCss" rel="stylesheet"
 	href="<%=Common.path%>themes/bootshop/bootstrap.min.css" media="screen" />
-<link href="themes/css/base.css" rel="stylesheet" media="screen" />
+<link href="<%=Common.path%>themes/css/base.css" rel="stylesheet"
+	media="screen" />
 <!-- Bootstrap style responsive -->
 <link href="<%=Common.path%>themes/css/bootstrap-responsive.min.css"
 	rel="stylesheet" />
@@ -37,10 +38,13 @@
 	href="<%=Common.path%>themes/switch/themeswitch.css" type="text/css"
 	media="screen" />
 
-
 <!-- Google-code-prettify -->
 <link href="<%=Common.path%>themes/js/google-code-prettify/prettify.css"
 	rel="stylesheet" />
+
+<!-- custom css -->
+<link href="<%=Common.path%>themes/css/custom.css" rel="stylesheet"
+	media="screen" />
 <!-- fav and touch icons -->
 <link rel="shortcut icon" href="themes/images/ico/favicon.ico">
 <link rel="apple-touch-icon-precomposed" sizes="144x144"

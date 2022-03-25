@@ -30,20 +30,28 @@
 						<img src="themes/images/products/panasonic.jpg" alt="Bootshop panasonoc New camera" />
 						<div class="caption">
 							<h5>Panasonic</h5>
-							<h4 style="text-align:center"><a class="btn" href="product_details.php"> <i
-										class="icon-zoom-in"></i></a> <a class="btn" href="#"> Thêm vào <i
-										class="icon-shopping-cart"></i></a> <a class="btn btn-primary"
-									href="#">$222.00</a></h4>
+							<h4 style="text-align: center">
+											<div class="text-error" href="#">$222.00</div>
+											<a class="btn btn-warning" href="product_details.php"> <i
+												class="icon-zoom-in"></i>
+											</a> <a class="btn btn-primary" href="#">Thêm vào <i
+												class="icon-shopping-cart"></i>
+											</a>
+										</h4>
 						</div>
 					</div><br />
 					<div class="thumbnail">
 						<img src="themes/images/products/kindle.png" title="Bootshop New Kindel" alt="Bootshop Kindel">
 						<div class="caption">
 							<h5>Kindle</h5>
-							<h4 style="text-align:center"><a class="btn" href="product_details.php"> <i
-										class="icon-zoom-in"></i></a> <a class="btn" href="#">Thêm vào <i
-										class="icon-shopping-cart"></i></a> <a class="btn btn-primary"
-									href="#">$222.00</a></h4>
+							<h4 style="text-align: center">
+											<div class="text-error" href="#">$222.00</div>
+											<a class="btn btn-warning" href="product_details.php"> <i
+												class="icon-zoom-in"></i>
+											</a> <a class="btn btn-primary" href="#">Thêm vào <i
+												class="icon-shopping-cart"></i>
+											</a>
+										</h4>
 						</div>
 					</div><br />
 					<div class="thumbnail">

@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import giadung.Dao.CategoryDao;
-import giadung.Dao.ProductsHotDao;
+import giadung.Dao.ProductsDao;
 import giadung.Dao.SlidesDao;
 import giadung.Dto.ProductsDto;
 import giadung.Entity.Categories;
@@ -21,7 +21,8 @@ public class HomeServiceImpl implements IHomeService {
 	private CategoryDao categoryDao;
 	
 	@Autowired
-	private ProductsHotDao productsHotDao;
+	private ProductsDao productsDao;
+	
 	
 	public List<Slides> GetDataSlide() {
 		// TODO Auto-generated method stub
@@ -35,14 +36,34 @@ public class HomeServiceImpl implements IHomeService {
 
 	public List<ProductsDto> getDataProductsHot() {
 		// TODO Auto-generated method stub
-		List<ProductsDto> listProducts = productsHotDao.getDataProductsHot();
+		List<ProductsDto> listProducts = productsDao.getDataProductsHot();
 		return listProducts;
 	}
 
-	
 	public List<ProductsDto> getDataProductsHotLast() {
-		List<ProductsDto> listProducts = productsHotDao.getDataProductsHotLast();
+		List<ProductsDto> listProducts = productsDao.getDataProductsHotLast();
 		return listProducts;
 	}
+
+	@Override
+	public List<ProductsDto> getDataProductsNew() {
+		// TODO Auto-generated method stub
+		List<ProductsDto> listProducts = productsDao.getDataProductsNew();
+		return listProducts;
+	}
+
+	@Override
+	public List<ProductsDto> getDataProductsSideBar() {
+		// TODO Auto-generated method stub
+		List<ProductsDto> listProducts = productsDao.getDataProductsNew();
+		return listProducts;
+	}
+
+//	@Override
+//	public List<ProductsDto> getDataAllProductsById() {
+//		// TODO Auto-generated method stub
+//		List<ProductsDto> listCategoryById = productsDao.getDataAllProductsById();
+//		return listCategoryById;
+//	}
 
 }

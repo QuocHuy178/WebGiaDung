@@ -26,13 +26,13 @@
 										<c:forEach var="item" items="${ products }" varStatus="index">
 											<li class="span3">
 												<div class="thumbnail">
-													<i class="tag"></i> <a href="product_details.php"><img
+												 <a href="/product_details/${ item.id }"><img
 														src="themes/images/products/${ item.image }" alt=""></a>
 													<div class="caption">
 														<h5>${ item.name }</h5>
 														<h4 class="text-center flex-column">
 															<span class="pull-right text-warning"> <fmt:formatNumber type="number" groupingUsed="true" value="${ item.price }" />	 ₫</span> <a
-																class="btn btn-success" href="product_details.php">Xem</a>
+																class="btn btn-success" href="/product_details/${ item.id }">Xem</a>
 														</h4>
 													</div>
 												</div>
@@ -46,13 +46,13 @@
 										<c:forEach var="item" items="${ productshot }" varStatus="index">
 											<li class="span3">
 												<div class="thumbnail">
-													<i class="tag"></i> <a href="product_details.php"><img
+													<a href="/product_details/${ item.id }"><img
 														src="themes/images/products/${ item.image }" alt=""></a>
 													<div class="caption">
 														<h5>${ item.name }</h5>
 														<h4 class="text-center flex-column">
-															<span class="pull-right text-warning"><fmt:formatNumber type="number" groupingUsed="true" value="${ item.price }" />	 ₫</span> <a
-																class="btn btn-success" href="product_details.php">Xem</a>
+															<span class="pull-right text-warning"><fmt:formatNumber type="number" groupingUsed="true" value="${ item.price }" /> VNĐ</span> <a
+																class="btn btn-success" href="/product_details/${ item.id }">Xem</a>
 														</h4>
 													</div>
 												</div>
@@ -71,16 +71,14 @@
 					</div>
 					<h4>Sản phẩm mới nhất</h4>
 					<ul class="thumbnails">
-						<c:forEach var="item" items="${ products }" varStatus="index">
+						<c:forEach var="item" items="${ productsnew }" varStatus="loop">
 							<li class="span3">
 								<div class="thumbnail">
-									<a href="product_details.php"> <img
-										src="<%=Common.path%>themes/images/products/"
-										alt="products" /></a>
+									<a href="/product_details/${ item.id }"> <img
+										src="<%=Common.path%>themes/images/products/${ item.image }"
+										alt="image_products" /></a>
 									<div class="caption">
 										<h5>${ item.name }</h5>
-										<p>${ item.description }</p>
-
 										<h4 style="text-align: center">
 											<div class="text-error" href="#"></div>
 											<a class="btn btn-warning" href="product_details.php"> <i
@@ -88,6 +86,7 @@
 											</a> <a class="btn btn-primary" href="#">Thêm vào <i
 												class="icon-shopping-cart"></i>
 											</a>
+											<div class="text-success" href="#"><fmt:formatNumber type="number" groupingUsed="true" value="${ item.price }" /> VNĐ</div>
 										</h4>
 									</div>
 								</div>

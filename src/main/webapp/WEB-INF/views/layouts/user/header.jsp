@@ -25,7 +25,7 @@
 				class="icon-bar"></span> <span class="icon-bar"></span>
 			</a>
 			<div class="navbar-inner">
-				<a class="brand" href="index.php"><img
+				<a class="brand" href='<c:url value="/home"/>'><img
 					src="<%=Common.path%>themes/images/logo.png" alt="Bootsshop" /></a>
 				<form class="form-inline navbar-search" method="post"
 					action="products.php">

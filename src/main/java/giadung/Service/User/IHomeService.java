@@ -15,4 +15,7 @@ public interface IHomeService {
 	public List<Categories>getDataCategories(); 
 	public List<ProductsDto>getDataProductsHot();
 	public List<ProductsDto>getDataProductsHotLast();
+	public List<ProductsDto>getDataProductsNew();
+	public List<ProductsDto>getDataProductsSideBar();
+//	public List<ProductsDto>getDataAllProductsById();
 }

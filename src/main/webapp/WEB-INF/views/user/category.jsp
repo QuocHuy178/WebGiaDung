@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <body>
-<%@include file="../layouts/user/slider.jsp"%>
+<h1 style="text-align: center;"> TEST ID THEO LOẠI : ${idCategory}</h1>
+	<%@include file="../layouts/user/slider.jsp"%>
 <!-- Header End====================================================================== -->
 <div id="mainBody">
 	<div class="container">
@@ -11,7 +12,7 @@
 			<!-- Sidebar end=============================================== -->
 			<div class="span9">
 				<ul class="breadcrumb">
-					<li><a href="index.php">Trang chủ</a> <span class="divider">/</span></li>
+					<li><a href='<c:url value="/home"/>'> Trang chủ</a> <span class="divider">/</span></li>
 					<li class="active">Sản phẩm</li>
 				</ul>
 

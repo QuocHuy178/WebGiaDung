@@ -37,3 +37,10 @@ img.products-item {
     display: flex;
     flex-direction: column;
 }
+
+.text-1-line {
+	white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+}

@@ -1,18 +1,20 @@
-package giadung.Dto;
+package giadung.Mapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-public class ProductsDtoMapper implements RowMapper<ProductsDto> {
+import giadung.Entity.Products;
+
+public class ProductsMapper implements RowMapper<Products> {
 
 	@Override
-	public ProductsDto mapRow(ResultSet rs, int rowNum) throws SQLException {
+	public Products mapRow(ResultSet rs, int rowNum) throws SQLException {
 		// TODO Auto-generated method stub
-		ProductsDto products = new ProductsDto();
+		Products products = new Products();
 		products.setId(rs.getLong("id"));
-		products.setId_category(rs.getInt("id_category"));
+		products.setId_Category(rs.getInt("id_category"));
 		products.setName(rs.getString("name"));
 		products.setPrice(rs.getDouble("price"));
 		products.setImage(rs.getString("image"));

@@ -1,8 +1,6 @@
-<%@page import="giadung.common.Common"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%-- <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator"
-	prefix="decorator"%> --%>
+<%@include file="/WEB-INF/views/layouts/user/tablib.jsp"%>
 <div id="header">
 	<div class="container">
 		<div id="welcomeLine" class="row">
@@ -26,7 +24,7 @@
 			</a>
 			<div class="navbar-inner">
 				<a class="brand" href='<c:url value="/home"/>'><img
-					src="<%=Common.path%>themes/images/logo.png" alt="Bootsshop" /></a>
+					src="<c:url value="/"/>themes/images/logo.png" alt="Bootsshop" /></a>
 				<form class="form-inline navbar-search" method="post"
 					action="products.php">
 					<input id="srchFld" class="srchTxt" type="text" /> <select
@@ -39,7 +37,7 @@
 						kiếm</button>
 				</form>
 				<ul id="topMenu" class="nav pull-right">
-					<li class=""><a href="product">Sản phẩm</a></li>
+					<li class=""><a href='<c:url value="/product"/>'>Sản phẩm</a></li>
 					<li class=""><a href="normal.php">Đặt hàng</a></li>
 					<li class=""><a href="contact.php">Liên hệ</a></li>
 					<li class=""><a href="#login" role="button"

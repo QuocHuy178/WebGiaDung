@@ -4436,10 +4436,17 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 	border-left-width: 0
 }
 
-.pagination ul>li>a:hover, .pagination ul>.active>a, .pagination ul>.active>span
+.pagination ul>li>a.active, .pagination ul>li>span.active {
+	background-color: #006dcc;
+	color: #fff;
+	font-weight: 600;
+}
+
+.pagination ul>li>a:hover:not(.active), .pagination ul>.active>a, .pagination ul>.active>span
 	{
 	background-color: #f5f5f5
 }
+
 
 .pagination ul>.active>a, .pagination ul>.active>span {
 	color: #999;

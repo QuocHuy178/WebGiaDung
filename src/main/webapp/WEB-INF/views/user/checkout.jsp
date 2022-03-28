@@ -5,7 +5,7 @@
 		<div class="container">
 			<div class="row">
 				<!-- Sidebar ================================================== -->
-				<%@include file="../layouts/user/slidebar.jsp"%>
+				<%@include file="../layouts/user/sidebar.jsp"%>
 				<!-- Sidebar end=============================================== -->
 				<div class="span9">
 					<ul class="breadcrumb">

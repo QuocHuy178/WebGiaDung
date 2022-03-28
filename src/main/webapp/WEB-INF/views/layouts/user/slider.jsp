@@ -1,7 +1,6 @@
-<%@page import="giadung.common.Common"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@include file="/WEB-INF/views/layouts/user/tablib.jsp"%>
 <div id="carouselBlk">
 	<div id="myCarousel" class="carousel slide">
 		<div class="carousel-inner">
@@ -14,7 +13,7 @@
 				</c:if>
 				<div class="container">
 					<a href="register.php"> <img style="width: 100%"
-						src="<%=Common.path%>themes/images/carousel/${item.img}"
+						src="<c:url value="/"/>themes/images/carousel/${item.img}"
 						alt="special offers" />
 					</a>
 					<div class="carousel-caption">

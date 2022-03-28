@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 import giadung.Dao.CategoryDao;
 import giadung.Dao.ProductsDao;
 import giadung.Dao.SlidesDao;
-import giadung.Dto.ProductsDto;
 import giadung.Entity.Categories;
+import giadung.Entity.Products;
 import giadung.Entity.Slides;
 
 @Service
@@ -29,40 +29,40 @@ public class HomeServiceImpl implements IHomeService {
 		return slidesDao.GetDataSlide();
 	}
 
-	public List<Categories> getDataCategories() {
+	public List<Categories> GetDataCategories() {
 		// TODO Auto-generated method stub
-		return categoryDao.getDataCategories();
+		return categoryDao.GetDataCategories();
 	}
 
-	public List<ProductsDto> getDataProductsHot() {
+	public List<Products> GetDataProductsHot() {
 		// TODO Auto-generated method stub
-		List<ProductsDto> listProducts = productsDao.getDataProductsHot();
+		List<Products> listProducts = productsDao.GetDataProductsHot();
 		return listProducts;
 	}
 
-	public List<ProductsDto> getDataProductsHotLast() {
-		List<ProductsDto> listProducts = productsDao.getDataProductsHotLast();
-		return listProducts;
-	}
-
-	@Override
-	public List<ProductsDto> getDataProductsNew() {
-		// TODO Auto-generated method stub
-		List<ProductsDto> listProducts = productsDao.getDataProductsNew();
+	public List<Products> GetDataProductsHotLast() {
+		List<Products> listProducts = productsDao.GetDataProductsHotLast();
 		return listProducts;
 	}
 
 	@Override
-	public List<ProductsDto> getDataProductsSideBar() {
+	public List<Products> GetDataProductsNew() {
 		// TODO Auto-generated method stub
-		List<ProductsDto> listProducts = productsDao.getDataProductsNew();
+		List<Products> listProducts = productsDao.GetDataProductsNew();
+		return listProducts;
+	}
+
+	@Override
+	public List<Products> GetDataProductsSideBar() {
+		// TODO Auto-generated method stub
+		List<Products> listProducts = productsDao.GetDataProductsSideBar();
 		return listProducts;
 	}
 
 //	@Override
-//	public List<ProductsDto> getDataAllProductsById() {
+//	public List<Products> GetDataAllProductsById() {
 //		// TODO Auto-generated method stub
-//		List<ProductsDto> listCategoryById = productsDao.getDataAllProductsById();
+//		List<Products> listCategoryById = productsDao.GetDataAllProductsById();
 //		return listCategoryById;
 //	}
 

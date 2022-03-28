@@ -11,25 +11,26 @@ public class HomeController extends BaseController {
 	@RequestMapping(value = { "/", "/home" })
 	public ModelAndView Index() {
 		_mvShare.addObject("slides", _homeService.GetDataSlide());
-		_mvShare.addObject("cates", _homeService.getDataCategories());
-		_mvShare.addObject("products", _homeService.getDataProductsHot());
-		_mvShare.addObject("productshot", _homeService.getDataProductsHotLast());
-		_mvShare.addObject("productsnew", _homeService.getDataProductsNew());
-		_mvShare.addObject("productssidebar", _homeService.getDataProductsSideBar());
+		_mvShare.addObject("cates", _homeService.GetDataCategories());
+		_mvShare.addObject("productsHot", _homeService.GetDataProductsHot());
+		_mvShare.addObject("productsHotLast", _homeService.GetDataProductsHotLast());
+		_mvShare.addObject("productsNew", _homeService.GetDataProductsNew());
+		_mvShare.addObject("productsSidebar", _homeService.GetDataProductsSideBar());
 		_mvShare.setViewName("user/index");
 		return _mvShare;
 	}
+	
 
 	@RequestMapping("/product")
 	public ModelAndView product() {
-		ModelAndView mv = new ModelAndView("user/product");
-		return mv;
+		_mvShare.setViewName("user/product/product");
+		return _mvShare;
 	}
 	
 	@RequestMapping("/category/{id}") 
 	public ModelAndView category(@PathVariable String id) {
-		ModelAndView mv = new ModelAndView("user/category");
-		mv.addObject("idCategory", id);
-		return mv;
+		_mvShare.setViewName("user/product/category");
+		_mvShare.addObject("idCategory", id);
+		return _mvShare;
 	}
 }

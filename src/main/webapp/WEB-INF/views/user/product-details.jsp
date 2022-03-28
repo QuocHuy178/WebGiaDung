@@ -1,6 +1,7 @@
+<%@page import="giadung.common.Common"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <body>
 	<%@include file="../layouts/user/slider.jsp"%>
 	<!-- Header End====================================================================== -->
@@ -18,39 +19,9 @@
 					</ul>
 					<div class="row">
 						<div id="gallery" class="span3">
-							<a href="themes/images/products/large/f1.jpg"
-								title="Fujifilm FinePix S2950 Digital Camera"> <img
-								src="themes/images/products/large/3.jpg" style="width: 100%"
-								alt="Fujifilm FinePix S2950 Digital Camera" />
-							</a>
-							<div id="differentview" class="moreOptopm carousel slide">
-								<div class="carousel-inner">
-									<div class="item active">
-										<a href="themes/images/products/large/f1.jpg"> <img
-											style="width: 29%" src="themes/images/products/large/f1.jpg"
-											alt="" /></a> <a href="themes/images/products/large/f2.jpg">
-											<img style="width: 29%"
-											src="themes/images/products/large/f2.jpg" alt="" />
-										</a> <a href="themes/images/products/large/f3.jpg"> <img
-											style="width: 29%" src="themes/images/products/large/f3.jpg"
-											alt="" /></a>
-									</div>
-									<div class="item">
-										<a href="themes/images/products/large/f3.jpg"> <img
-											style="width: 29%" src="themes/images/products/large/f3.jpg"
-											alt="" /></a> <a href="themes/images/products/large/f1.jpg">
-											<img style="width: 29%"
-											src="themes/images/products/large/f1.jpg" alt="" />
-										</a> <a href="themes/images/products/large/f2.jpg"> <img
-											style="width: 29%" src="themes/images/products/large/f2.jpg"
-											alt="" /></a>
-									</div>
-								</div>
-								<!--  
-			  <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-              <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a> 
-			  -->
-							</div>
+							<a href="<%=Common.path%>themes/images/products/${ product.image }" title="">
+									<img style="height:240px;width:240px;object-fit:cover;" src="<%=Common.path%>themes/images/products/${ product.image }"  alt="" />
+								</a>
 
 							<div class="btn-toolbar">
 								<div class="btn-group">
@@ -64,12 +35,11 @@
 							</div>
 						</div>
 						<div class="span6">
-							<h3>Fujifilm FinePix S2950 Digital Camera</h3>
-							<small>- (14MP, 18x Optical Zoom) 3-inch LCD</small>
+							<h3>${ product.name }</h3>
 							<hr class="soft" />
 							<form class="form-horizontal qtyFrm">
 								<div class="control-group">
-									<label class="control-label"><span>$222.00</span></label>
+									<label class="control-label"><span><fmt:formatNumber type="number" groupingUsed="true" value="${ product.price }" />	 VNĐ</span></label>
 									<div class="controls">
 										<input style="width: 80px;" type="number" class="span1"
 											placeholder="Số lượng." />
@@ -84,7 +54,7 @@
 							<hr class="soft" />
 							<h4>100 sản phẩm tồn kho</h4>
 							<hr class="soft clr" />
-							<p>Mô tả</p>
+							<p>${ product.description }</p>
 
 						</div>
 
@@ -105,24 +75,11 @@
 											</tr>
 											<tr class="techSpecRow">
 												<td class="techSpecTD1">Nhà sản xuất:</td>
-												<td class="techSpecTD2">Fujifilm</td>
-											</tr>
-											<tr class="techSpecRow">
-												<td class="techSpecTD1">Mã máy:</td>
-												<td class="techSpecTD2">FinePix S2950HD</td>
+												<td class="techSpecTD2">${ product.id_category }</td>
 											</tr>
 											<tr class="techSpecRow">
 												<td class="techSpecTD1">Ngày sản xuất:</td>
-												<td class="techSpecTD2">2011-01-28</td>
-											</tr>
-											<tr class="techSpecRow">
-												<td class="techSpecTD1">Trọng lượng:</td>
-												<td class="techSpecTD2">5.50" h x 5.50" w x 2.00" l,
-													.75 pounds</td>
-											</tr>
-											<tr class="techSpecRow">
-												<td class="techSpecTD1">Chiều dài:</td>
-												<td class="techSpecTD2">3</td>
+												<td class="techSpecTD2">${ product.create_date }</td>
 											</tr>
 										</tbody>
 									</table>

@@ -26,13 +26,13 @@
 										<c:forEach var="item" items="${ products }" varStatus="index">
 											<li class="span3">
 												<div class="thumbnail">
-												 <a href="/product_details/${ item.id }"><img
+												 <a href="<c:url value="/chi-tiet-san-pham/${ item.id }"/>"><img
 														src="themes/images/products/${ item.image }" alt=""></a>
 													<div class="caption">
 														<h5>${ item.name }</h5>
 														<h4 class="text-center flex-column">
-															<span class="pull-right text-warning"> <fmt:formatNumber type="number" groupingUsed="true" value="${ item.price }" />	 ₫</span> <a
-																class="btn btn-success" href="/product_details/${ item.id }">Xem</a>
+															<span class="pull-right text-warning"> <fmt:formatNumber type="number" groupingUsed="true" value="${ item.price }" />	 ₫</span> 
+															<a class="btn btn-success" href="<c:url value="/chi-tiet-san-pham/${ item.id }"/>">Xem</a>													
 														</h4>
 													</div>
 												</div>
@@ -46,13 +46,13 @@
 										<c:forEach var="item" items="${ productshot }" varStatus="index">
 											<li class="span3">
 												<div class="thumbnail">
-													<a href="/product_details/${ item.id }"><img
+													<a href="<c:url value="/chi-tiet-san-pham/${ item.id }"/>"><img
 														src="themes/images/products/${ item.image }" alt=""></a>
 													<div class="caption">
 														<h5>${ item.name }</h5>
 														<h4 class="text-center flex-column">
 															<span class="pull-right text-warning"><fmt:formatNumber type="number" groupingUsed="true" value="${ item.price }" /> VNĐ</span> <a
-																class="btn btn-success" href="/product_details/${ item.id }">Xem</a>
+																class="btn btn-success" href="<c:url value="/chi-tiet-san-pham/${ item.id }"/>">Xem</a>
 														</h4>
 													</div>
 												</div>
@@ -74,7 +74,7 @@
 						<c:forEach var="item" items="${ productsnew }" varStatus="loop">
 							<li class="span3">
 								<div class="thumbnail">
-									<a href="/product_details/${ item.id }"> <img
+									<a href="<c:url value="/chi-tiet-san-pham/${ item.id }"/>"> <img
 										src="<%=Common.path%>themes/images/products/${ item.image }"
 										alt="image_products" /></a>
 									<div class="caption">

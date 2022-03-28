@@ -32,4 +32,5 @@ public class HomeController extends BaseController {
 		mv.addObject("idCategory", id);
 		return mv;
 	}
+
 }

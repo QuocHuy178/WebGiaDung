@@ -11,7 +11,7 @@ public class MapperCategories implements RowMapper<Categories> {
 		// TODO Auto-generated method stub
 		Categories categories = new Categories();
 		categories.setId(rs.getInt("id"));
-		categories.setName(rs.getString("name"));
+		categories.setname(rs.getString("name"));
 
 		return categories;
 	}

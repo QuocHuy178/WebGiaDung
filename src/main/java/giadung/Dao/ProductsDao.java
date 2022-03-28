@@ -30,6 +30,11 @@ public class ProductsDao extends BaseDao {
 		List<ProductsDto> listProducts = _jdbcTemplate.query(sql, new ProductsDtoMapper());
 				return listProducts;
 	}
+	public List<ProductsDto> getProductById(long id) {
+		String sql ="SELECT products.*, categories.name From products INNER JOIN categories ON products.id_category = categories.id Where products.id = "+id+"";
+		List<ProductsDto> listProducts = _jdbcTemplate.query(sql, new ProductsDtoMapper());
+				return listProducts;
+	}
 	
 //	public List<ProductsDto> getDataAllProductsById(int id) {
 //		String sql = "SELECT * FROM `product` WHERE FIND_IN_SET('$id', `id_category`)";

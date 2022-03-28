@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <body>
-<%@include file="../layouts/user/slider.jsp"%>
+<%@include file="../../layouts/user/slider.jsp"%>
 <!-- Header End====================================================================== -->
 <div id="mainBody">
 	<div class="container">
 		<div class="row">
 			<!-- Sidebar ================================================== -->
-			<%@include file="../layouts/user/slidebar.jsp"%>
+			<%@include file="../../layouts/user/sidebar.jsp"%>
 			<!-- Sidebar end=============================================== -->
 			<div class="span9">
 				<ul class="breadcrumb">
@@ -62,7 +62,7 @@
 				<div class="pagination">
 					<ul>
 						<li><a href="#">&lsaquo;</a></li>
-						<li><a href="#">1</a></li>
+						<li><a class="active" href="#">1</a></li>
 						<li><a href="#">2</a></li>
 						<li><a href="#">3</a></li>
 						<li><a href="#">4</a></li>

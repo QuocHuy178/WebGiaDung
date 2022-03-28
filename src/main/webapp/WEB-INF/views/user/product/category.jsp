@@ -2,13 +2,13 @@
 	pageEncoding="UTF-8"%>
 <body>
 <h1 style="text-align: center;"> TEST ID THEO LOẠI : ${idCategory}</h1>
-	<%@include file="../layouts/user/slider.jsp"%>
+	<%@include file="../../layouts/user/slider.jsp"%>
 <!-- Header End====================================================================== -->
 <div id="mainBody">
 	<div class="container">
 		<div class="row">
 			<!-- Sidebar ================================================== -->
-			<%@include file="../layouts/user/slidebar.jsp"%>
+			<%@include file="../../layouts/user/sidebar.jsp"%>
 			<!-- Sidebar end=============================================== -->
 			<div class="span9">
 				<ul class="breadcrumb">

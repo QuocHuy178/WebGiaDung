@@ -1,11 +1,13 @@
-package giadung.Entity;
+package giadung.Mapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-public class MapperCategories implements RowMapper<Categories> {
+import giadung.Entity.Categories;
+
+public class CategoriesMapper implements RowMapper<Categories> {
 
 	public Categories mapRow(ResultSet rs, int rowNum) throws SQLException {
 		// TODO Auto-generated method stub

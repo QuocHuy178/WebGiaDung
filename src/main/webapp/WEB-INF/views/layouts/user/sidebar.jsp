@@ -1,7 +1,8 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@include file="/WEB-INF/views/layouts/user/tablib.jsp"%>
+
 <div id="sidebar" class="span3">
 	<div class="well well-small">
 		<a id="myCart" href="product_summary.php"><img
@@ -16,35 +17,35 @@
 							class="icon-chevron-right"></i> ${ item.name }
 					</a></li>
 				</c:forEach>
-			</ul>
-		</li>
+			</ul></li>
 	</ul>
 	<br />
-	<c:forEach var="item" items="${ productssidebar }" varStatus="index">
+	<c:forEach var="item" items="${ productsSidebar }" varStatus="index">
 		<div class="thumbnail">
-			<a href="/product_details/${ item.id }"> <img
-				src="themes/images/products/${ item.image }" alt="">
+			<a href='<c:url value="/product_details/${ item.id }"/>'> <img
+				src="<c:url value="/"/>themes/images/products/${ item.image }" alt="">
 			</a>
 			<div class="caption">
 				<h5>${ item.name }</h5>
 				<h4 style="text-align: center">
-					<div class="text-error" href="#">
-						<fmt:formatNumber type="number" groupingUsed="true"
-							value="${ item.price }" />
+					<div class="text-error">
+				 		<fmt:formatNumber type="number" groupingUsed="true"
+							value="${ item.price }" /> 
 						VNĐ
 					</div>
-					<a class="btn btn-warning" href="/product_details/${ item.id }">
+					<a class="btn btn-warning" href='<c:url value="/product_details/${ item.id }"/>'>
 						<i class="icon-zoom-in"></i>
-					</a> <a class="btn btn-primary" href="#">Thêm vào <i
-						class="icon-shopping-cart"></i>
 					</a>
+					<div class="btn btn-primary">
+						Thêm vào <i class="icon-shopping-cart"></i>
+					</div>
 				</h4>
 			</div>
 		</div>
 	</c:forEach>
 	<br />
 	<div class="thumbnail">
-		<img src="themes/images/payment_methods.png"
+		<img src="<c:url value="/"/>themes/images/payment_methods.png"
 			title="Bootshop Payment Methods" alt="Payments Methods">
 		<div class="caption">
 			<h5>Phương thức thanh toán</h5>

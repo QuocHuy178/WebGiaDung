@@ -104,147 +104,6 @@
 										<div class="tab-pane" id="listView">
 											<div class="row">
 												<div class="span2">
-													<img src="themes/images/products/4.jpg" alt="" />
-												</div>
-												<div class="span4">
-
-													<hr class="soft" />
-													<h5>Tên sản phẩm</h5>
-													<p>Mô tả.</p>
-													<a class="btn btn-small pull-right"
-														href="product_details.php">Xem chi tiết</a> <br
-														class="clr" />
-												</div>
-												<div class="span3 alignR">
-													<form class="form-horizontal qtyFrm">
-														<h3>$222.00</h3>
-
-														<div class="btn-group">
-															<a href="product_details.php"
-																class="btn btn-large btn-primary"> Thêm vào <i
-																class=" icon-shopping-cart"></i></a> <a
-																href="product_details.php" class="btn btn-large"><i
-																class="icon-zoom-in"></i></a>
-														</div>
-													</form>
-												</div>
-											</div>
-											<hr class="soft" />
-											<div class="row">
-												<div class="span2">
-													<img src="themes/images/products/5.jpg" alt="" />
-												</div>
-												<div class="span4">
-
-													<hr class="soft" />
-													<h5>Tên sản phẩm</h5>
-													<p>Mô tả.</p>
-													<a class="btn btn-small pull-right"
-														href="product_details.php">Xem chi tiết</a> <br
-														class="clr" />
-												</div>
-												<div class="span3 alignR">
-													<form class="form-horizontal qtyFrm">
-														<h3>$222.00</h3>
-
-														<div class="btn-group">
-															<a href="product_details.php"
-																class="btn btn-large btn-primary"> Thêm vào <i
-																class=" icon-shopping-cart"></i></a> <a
-																href="product_details.php" class="btn btn-large"><i
-																class="icon-zoom-in"></i></a>
-														</div>
-													</form>
-												</div>
-											</div>
-											<hr class="soft" />
-											<div class="row">
-												<div class="span2">
-													<img src="themes/images/products/6.jpg" alt="" />
-												</div>
-												<div class="span4">
-
-													<hr class="soft" />
-													<h5>Tên sản phẩm</h5>
-													<p>Mô tả.</p>
-													<a class="btn btn-small pull-right"
-														href="product_details.php">Xem chi tiết</a> <br
-														class="clr" />
-												</div>
-												<div class="span3 alignR">
-													<form class="form-horizontal qtyFrm">
-														<h3>$222.00</h3>
-
-														<div class="btn-group">
-															<a href="product_details.php"
-																class="btn btn-large btn-primary"> Thêm vào <i
-																class=" icon-shopping-cart"></i></a> <a
-																href="product_details.php" class="btn btn-large"><i
-																class="icon-zoom-in"></i></a>
-														</div>
-													</form>
-												</div>
-											</div>
-											<hr class="soft" />
-											<div class="row">
-												<div class="span2">
-													<img src="themes/images/products/7.jpg" alt="" />
-												</div>
-												<div class="span4">
-
-													<hr class="soft" />
-													<h5>Tên sản phẩm</h5>
-													<p>Mô tả.</p>
-													<a class="btn btn-small pull-right"
-														href="product_details.php">Xem chi tiết</a> <br
-														class="clr" />
-												</div>
-												<div class="span3 alignR">
-													<form class="form-horizontal qtyFrm">
-														<h3>$222.00</h3>
-
-														<div class="btn-group">
-															<a href="product_details.php"
-																class="btn btn-large btn-primary"> Thêm vào <i
-																class=" icon-shopping-cart"></i></a> <a
-																href="product_details.php" class="btn btn-large"><i
-																class="icon-zoom-in"></i></a>
-														</div>
-													</form>
-												</div>
-											</div>
-
-											<hr class="soft" />
-											<div class="row">
-												<div class="span2">
-													<img src="themes/images/products/8.jpg" alt="" />
-												</div>
-												<div class="span4">
-
-													<hr class="soft" />
-													<h5>Tên sản phẩm</h5>
-													<p>Mô tả.</p>
-													<a class="btn btn-small pull-right"
-														href="product_details.php">Xem chi tiết</a> <br
-														class="clr" />
-												</div>
-												<div class="span3 alignR">
-													<form class="form-horizontal qtyFrm">
-														<h3>$222.00</h3>
-
-														<div class="btn-group">
-															<a href="product_details.php"
-																class="btn btn-large btn-primary"> Thêm vào <i
-																class=" icon-shopping-cart"></i></a> <a
-																href="product_details.php" class="btn btn-large"><i
-																class="icon-zoom-in"></i></a>
-														</div>
-													</form>
-												</div>
-											</div>
-											<hr class="soft" />
-											<div class="row">
-												<div class="span2">
 													<img src="themes/images/products/9.jpg" alt="" />
 												</div>
 												<div class="span4">
@@ -258,7 +117,9 @@
 												</div>
 												<div class="span3 alignR">
 													<form class="form-horizontal qtyFrm">
-														<h3>$222.00</h3>
+														<h3 class="text-error"><fmt:formatNumber type="number" groupingUsed="true"
+															value="123456" />
+														₫</h3>
 
 														<div class="btn-group">
 															<a href="product_details.php"

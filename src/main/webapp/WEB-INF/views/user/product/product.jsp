@@ -38,32 +38,44 @@
 
 						<div class="tab-pane  active" id="blockView">
 							<ul class="thumbnails">
-
-								<li class="span3">
-									<div class="thumbnail">
-										<a href='<c:url value="/product-details/${ item.id }"/>'>
-											<img
-											src="<c:url value="/"/>themes/images/products/${ item.image }"
-											alt="image_products" />
-										</a>
-										<div class="caption">
-											<h5>name</h5>
-											<h4 style="text-align: center">
-												<div class="text-error" href="#"></div>
-												<a class="btn btn-warning" href="product_details.php"> <i
-													class="icon-zoom-in"></i>
-												</a> <a class="btn btn-primary" href="#">Thêm vào <i
-													class="icon-shopping-cart"></i>
-												</a>
-												<div class="text-success" href="#">
-													<fmt:formatNumber type="number" groupingUsed="true"
-														value="30000" />
-													₫
+								<c:choose>
+									<c:when test="${ allProduct.size() > 0 }">
+										<c:forEach var="item" items="${ allProduct }"
+											varStatus="loop">
+											<li class="span3">
+												<div class="thumbnail">
+													<a href='<c:url value="/product-details/${ item.id }"/>'>
+														<img
+														src="<c:url value="/"/>themes/images/products/${ item.image }"
+														alt="image_products" />
+													</a>
+													<div class="caption">
+														<h5>${ item.name }</h5>
+														<h4 style="text-align: center">
+															<div class="text-error" href="#"></div>
+															<a class="btn btn-warning"
+																href='<c:url value="/product-details/${ item.id }"/>'>
+																<i class="icon-zoom-in"></i>
+															</a> <a class="btn btn-primary" href="#">Thêm vào <i
+																class="icon-shopping-cart"></i>
+															</a>
+															<div class="text-success" href="#">
+																<fmt:formatNumber type="number" groupingUsed="true"
+																	value="${ item.price }" />
+																₫
+															</div>
+														</h4>
+													</div>
 												</div>
-											</h4>
-										</div>
-									</div>
-								</li>
+											</li>
+										</c:forEach>
+									</c:when>
+									<c:otherwise>
+										<h5 class="text-success text-center">
+											Shop hiện chưa có bất kỳ sản phẩm nào !!!
+											</h3>
+									</c:otherwise>
+								</c:choose>
 							</ul>
 							<hr class="soft" />
 						</div>

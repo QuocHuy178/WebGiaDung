@@ -1,7 +1,7 @@
-<%@page import="giadung.common.Common"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@include file="/WEB-INF/views/layouts/user/tablib.jsp"%>
+
 <body>
 	<%@include file="../../layouts/user/slider.jsp"%>
 	<!-- Header End====================================================================== -->
@@ -19,8 +19,8 @@
 					</ul>
 					<div class="row">
 						<div id="gallery" class="span3">
-							<a href="<%=Common.path%>themes/images/products/${ product.image }" title="">
-									<img style="height:240px;width:240px;object-fit:cover;" src="<%=Common.path%>themes/images/products/${ product.image }"  alt="" />
+							<a href="<c:url value="/"/>themes/images/products/${ product.image }" title="">
+									<img style="height:240px;width:240px;object-fit:cover;" src="<c:url value="/"/>themes/images/products/${ product.image }"  alt="" />
 								</a>
 
 							<div class="btn-toolbar">
@@ -39,7 +39,11 @@
 							<hr class="soft" />
 							<form class="form-horizontal qtyFrm">
 								<div class="control-group">
-									<label class="control-label"><span><fmt:formatNumber type="number" groupingUsed="true" value="${ product.price }" />	 VNĐ</span></label>
+									<label class="control-label text-success fw-bold">
+										<span>
+											<fmt:formatNumber type="number" groupingUsed="true" value="${ product.price }" /> ₫
+										</span>
+									</label>
 									<div class="controls">
 										<input style="width: 80px;" type="number" class="span1"
 											placeholder="Số lượng." />
@@ -272,100 +276,34 @@
 											<ul class="thumbnails">
 												<li class="span3">
 													<div class="thumbnail">
-														<a href="product_details.php"><img
-															src="themes/images/products/10.jpg" alt="" /></a>
-														<div class="caption">
-															<h5>Manicure &amp; Pedicure</h5>
-															<p>Mô tả.</p>
-															<h4 style="text-align: center">
-																<a class="btn" href="product_details.php"> <i
-																	class="icon-zoom-in"></i></a> <a class="btn" href="#">Thêm
-																	vào <i class="icon-shopping-cart"></i>
-																</a> <a class="btn btn-primary" href="#">&euro;222.00</a>
-															</h4>
-														</div>
+											<a href='<c:url value="/product-details/${ item.id }"/>'>
+												<img
+												src="<c:url value="/"/>themes/images/products/${ item.image }"
+												alt="image_products" />
+											</a>
+											<div class="caption">
+												<h5>${ item.name }</h5>
+												<h4 style="text-align: center">
+													<div class="text-error" href="#"></div>
+													<a class="btn btn-warning" href='<c:url value="/product-details/${ item.id }"/>'>
+														<i class="icon-zoom-in"></i>
+													</a> <a class="btn btn-primary" href="#">Thêm vào <i
+														class="icon-shopping-cart"></i>
+													</a>
+													<div class="text-success" href="#">
+														<fmt:formatNumber type="number" groupingUsed="true"
+															value="${ item.price }" />
+														₫
 													</div>
+												</h4>
+											</div>
+										</div>
 												</li>
-												<li class="span3">
-													<div class="thumbnail">
-														<a href="product_details.php"><img
-															src="themes/images/products/11.jpg" alt="" /></a>
-														<div class="caption">
-															<h5>Manicure &amp; Pedicure</h5>
-															<p>Mô tả.</p>
-															<h4 style="text-align: center">
-																<a class="btn" href="product_details.php"> <i
-																	class="icon-zoom-in"></i></a> <a class="btn" href="#">Thêm
-																	vào <i class="icon-shopping-cart"></i>
-																</a> <a class="btn btn-primary" href="#">&euro;222.00</a>
-															</h4>
-														</div>
-													</div>
-												</li>
-												<li class="span3">
-													<div class="thumbnail">
-														<a href="product_details.php"><img
-															src="themes/images/products/12.jpg" alt="" /></a>
-														<div class="caption">
-															<h5>Manicure &amp; Pedicure</h5>
-															<p>Mô tả.</p>
-															<h4 style="text-align: center">
-																<a class="btn" href="product_details.php"> <i
-																	class="icon-zoom-in"></i></a> <a class="btn" href="#">Thêm
-																	vào <i class="icon-shopping-cart"></i>
-																</a> <a class="btn btn-primary" href="#">&euro;222.00</a>
-															</h4>
-														</div>
-													</div>
-												</li>
-												<li class="span3">
-													<div class="thumbnail">
-														<a href="product_details.php"><img
-															src="themes/images/products/13.jpg" alt="" /></a>
-														<div class="caption">
-															<h5>Manicure &amp; Pedicure</h5>
-															<p>Mô tả.</p>
-															<h4 style="text-align: center">
-																<a class="btn" href="product_details.php"> <i
-																	class="icon-zoom-in"></i></a> <a class="btn" href="#">Thêm
-																	vào <i class="icon-shopping-cart"></i>
-																</a> <a class="btn btn-primary" href="#">&euro;222.00</a>
-															</h4>
-														</div>
-													</div>
-												</li>
-												<li class="span3">
-													<div class="thumbnail">
-														<a href="product_details.php"><img
-															src="themes/images/products/1.jpg" alt="" /></a>
-														<div class="caption">
-															<h5>Manicure &amp; Pedicure</h5>
-															<p>Mô tả.</p>
-															<h4 style="text-align: center">
-																<a class="btn" href="product_details.php"> <i
-																	class="icon-zoom-in"></i></a> <a class="btn" href="#">Thêm
-																	vào <i class="icon-shopping-cart"></i>
-																</a> <a class="btn btn-primary" href="#">&euro;222.00</a>
-															</h4>
-														</div>
-													</div>
-												</li>
-												<li class="span3">
-													<div class="thumbnail">
-														<a href="product_details.php"><img
-															src="themes/images/products/2.jpg" alt="" /></a>
-														<div class="caption">
-															<h5>Manicure &amp; Pedicure</h5>
-															<p>Mô tả.</p>
-															<h4 style="text-align: center">
-																<a class="btn" href="product_details.php"> <i
-																	class="icon-zoom-in"></i></a> <a class="btn" href="#">Thêm
-																	vào <i class="icon-shopping-cart"></i>
-																</a> <a class="btn btn-primary" href="#">&euro;222.00</a>
-															</h4>
-														</div>
-													</div>
-												</li>
+												
+												
+												
+												
+												
 											</ul>
 											<hr class="soft" />
 										</div>

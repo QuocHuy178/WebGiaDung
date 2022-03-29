@@ -14,7 +14,7 @@ public class ProductsMapper implements RowMapper<Products> {
 		// TODO Auto-generated method stub
 		Products products = new Products();
 		products.setId(rs.getLong("id"));
-		products.setId_Category(rs.getInt("id_category"));
+		products.setId_category(rs.getInt("id_category"));
 		products.setName(rs.getString("name"));
 		products.setPrice(rs.getDouble("price"));
 		products.setImage(rs.getString("image"));

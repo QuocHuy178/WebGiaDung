@@ -44,3 +44,7 @@ img.products-item {
     display: block;
     text-overflow: ellipsis;
 }
+
+.fw-bold {
+	font-weight: bold;
+}}

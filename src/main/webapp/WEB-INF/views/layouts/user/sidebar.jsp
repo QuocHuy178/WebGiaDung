@@ -22,7 +22,7 @@
 	<br />
 	<c:forEach var="item" items="${ productsSidebar }" varStatus="index">
 		<div class="thumbnail">
-			<a href='<c:url value="/product_details/${ item.id }"/>'> <img
+			<a href='<c:url value="/product-details/${ item.id }"/>'> <img
 				src="<c:url value="/"/>themes/images/products/${ item.image }" alt="">
 			</a>
 			<div class="caption">
@@ -31,9 +31,9 @@
 					<div class="text-error">
 				 		<fmt:formatNumber type="number" groupingUsed="true"
 							value="${ item.price }" /> 
-						VNĐ
+						₫
 					</div>
-					<a class="btn btn-warning" href='<c:url value="/product_details/${ item.id }"/>'>
+					<a class="btn btn-warning" href='<c:url value="/product-details/${ item.id }"/>'>
 						<i class="icon-zoom-in"></i>
 					</a>
 					<div class="btn btn-primary">

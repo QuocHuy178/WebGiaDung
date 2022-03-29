@@ -11,12 +11,15 @@ import giadung.Service.User.IProductService;
 @Controller
 public class ProductController extends BaseController {
 	@Autowired
-	private IProductService _productService;
+	IProductService _productService;
 	
-	@RequestMapping(value = { "chi-tiet-san-pham/{id}"})
+	@RequestMapping(value = { "product-details/{id}"})
 	public ModelAndView Index(@PathVariable long id) {
-		_mvShare.setViewName("user/product-details");
-		_mvShare.addObject("product", _productService.getProductById(id));
+		_mvShare.addObject("slides", _homeService.GetDataSlide());
+		_mvShare.addObject("cates", _homeService.GetDataCategories());
+		_mvShare.addObject("productsSidebar", _homeService.GetDataProductsSideBar());
+		_mvShare.setViewName("user/product/product_details");
+		_mvShare.addObject("product", _productService.GetProductById(id));
 		
 		return _mvShare;
 	}

@@ -1,12 +1,19 @@
 package giadung.Controller.User;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import giadung.Service.User.IProductService;
+import giadung.Service.User.ProductServiceImpl;
+
 @Controller
 public class HomeController extends BaseController {
+	
+	@Autowired
+	ProductServiceImpl _productService;
 	
 	@RequestMapping(value = { "/", "/home" })
 	public ModelAndView Index() {
@@ -23,14 +30,15 @@ public class HomeController extends BaseController {
 
 	@RequestMapping("/product")
 	public ModelAndView product() {
+		_mvShare.addObject("allProduct", _productService.GetAllProduct());
 		_mvShare.setViewName("user/product/product");
 		return _mvShare;
 	}
 	
 	@RequestMapping("/category/{id}") 
-	public ModelAndView category(@PathVariable String id) {
+	public ModelAndView category(@PathVariable int id) {
+		_mvShare.addObject("productByCate", _productService.GetProductByIdCate(id));
 		_mvShare.setViewName("user/product/category");
-		_mvShare.addObject("idCategory", id);
 		return _mvShare;
 	}
 

@@ -7,11 +7,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import giadung.Service.User.IProductService;
+import giadung.Service.User.ProductServiceImpl;
 
 @Controller
 public class ProductController extends BaseController {
 	@Autowired
-	IProductService _productService;
+	ProductServiceImpl _productService;
 	
 	@RequestMapping(value = { "product-details/{id}"})
 	public ModelAndView Index(@PathVariable long id) {

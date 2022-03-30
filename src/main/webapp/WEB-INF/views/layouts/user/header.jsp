@@ -28,10 +28,11 @@
 				<form class="form-inline navbar-search" method="post"
 					action="products.php">
 					<input id="srchFld" class="srchTxt" type="text" /> <select
-						class="srchTxt">
-						<option>Tất cả</option>
-						<option>Áo</option>
-						<option>Quần</option>
+						class="srchTxt" name="options">
+						<option value="">-- Lọc --</option>
+						<c:forEach var="item" items="${ cates }" varStatus="index">
+							<option value="${ item.id }">${ item.name }</option>
+						</c:forEach>
 					</select>
 					<button type="submit" id="submitButton" class="btn btn-primary">Tìm
 						kiếm</button>

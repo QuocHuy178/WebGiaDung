@@ -2,7 +2,6 @@
 	pageEncoding="UTF-8"%>
 <%@include file="/WEB-INF/views/layouts/user/tablib.jsp"%>
 <body>
-	<%@include file="../../layouts/user/slider.jsp"%>
 	<!-- Header End====================================================================== -->
 	<div id="mainBody">
 		<div class="container">
@@ -16,7 +15,6 @@
 							class="divider">/</span></li>
 						<li class="active">Sản phẩm</li>
 					</ul>
-
 					<hr class="soft" />
 					<form class="form-horizontal span6">
 						<div class="control-group">
@@ -40,34 +38,32 @@
 						<div class="tab-pane  active" id="blockView">
 							<ul class="thumbnails">
 								<c:choose>
-									<c:when test="${ productByCate.size() > 0 }">
-										<c:forEach var="item" items="${ productByCate }"
+									<c:when test="${ productsByCateAndPaginate.size() > 0 }">
+										<c:forEach var="item" items="${ productsByCateAndPaginate }"
 											varStatus="loop">
 											<li class="span3">
 												<div class="thumbnail">
-													<a href='<c:url value="/product-details/${ item.id }"/>'>
-														<img
-														src="<c:url value="/"/>themes/images/products/${ item.image }"
-														alt="image_products" />
-													</a>
-													<div class="caption">
-														<h5>${ item.name }</h5>
-														<h4 style="text-align: center">
-															<div class="text-error" href="#"></div>
-															<a class="btn btn-warning"
-																href='<c:url value="/product-details/${ item.id }"/>'>
-																<i class="icon-zoom-in"></i>
-															</a> <a class="btn btn-primary" href="#">Thêm vào <i
-																class="icon-shopping-cart"></i>
-															</a>
-															<div class="text-success" href="#">
-																<fmt:formatNumber type="number" groupingUsed="true"
-																	value="${ item.price }" />
-																₫
-															</div>
-														</h4>
+											<a href='<c:url value="/product-details/${ item.id }"/>'>
+												<img class="radius products-item"
+												src="<c:url value="/"/>themes/images/products/${ item.image }"
+												alt="image_products" />
+											</a>
+											<div class="caption">
+												<h5>${ item.name }</h5>
+												<h4 style="text-align: center">
+													<div class="text-success" href="#">
+														<fmt:formatNumber type="number" groupingUsed="true"
+															value="${ item.price }" />
+														₫
 													</div>
-												</div>
+													<a class="btn btn-warning" href='<c:url value="/product-details/${ item.id }"/>'>
+														<i class="icon-zoom-in"></i>
+													</a> <a class="btn btn-primary" href="#">Thêm vào <i
+														class="icon-shopping-cart"></i>
+													</a>
+												</h4>
+											</div>
+										</div>
 											</li>
 										</c:forEach>
 									</c:when>

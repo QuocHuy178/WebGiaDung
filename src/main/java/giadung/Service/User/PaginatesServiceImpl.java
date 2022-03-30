@@ -1,7 +1,10 @@
 package giadung.Service.User;
 
+import org.springframework.stereotype.Service;
+
 import giadung.Entity.PaginatesDto;
 
+@Service
 public class PaginatesServiceImpl implements IPaginatesService {
 
 	@Override
@@ -12,6 +15,7 @@ public class PaginatesServiceImpl implements IPaginatesService {
 		paginates.setLimit(limit);
 		paginates.setTotalPage(SetInfoTotalPage(totalData, limit));
 		paginates.setCurrentPage(CheckCurrentPage(currentPage, paginates.getTotalPage()));
+		
 		paginates.setStart(FindStart(paginates.getCurrentPage(), limit));
 		paginates.setEnd(FindEnd(paginates.getStart(), limit, totalData));
 
@@ -20,8 +24,9 @@ public class PaginatesServiceImpl implements IPaginatesService {
 
 	private int FindStart(int currentPage, int limit) {
 		// TODO Auto-generated method stub
-
-		return ((currentPage - 1) * limit) + 1;
+		int start = ((currentPage - 1) * limit) + 1;
+		
+		return start < 0 ? 1 : start;
 	}
 
 	private int FindEnd(int start, int limit, int totalData) {

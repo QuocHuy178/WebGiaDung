@@ -4,7 +4,9 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import giadung.Entity.Categories;
 import giadung.Entity.Products;
+import giadung.Mapper.CategoriesMapper;
 import giadung.Mapper.ProductsMapper;
 
 @Repository
@@ -40,21 +42,14 @@ public class ProductsDao extends BaseDao {
 		return listProducts;
 	}
 
-//	public List<Products> GetDataAllProductsById(int id) {
-//		String sql = "SELECT * FROM `product` WHERE FIND_IN_SET('$id', `id_category`)";
-//		List<Products> listProducts = _jdbcTemplate.query(sql, new ProductsMapper());
-//				return listProducts;
-//	}
-
-	public List<Products> GetProductByIdCate(int id) {
-		String sql = "SELECT *, c.name as cateName FROM products as p INNER JOIN categories as c ON p.id_category = c.id WHERE p.id_category = "
-				+ id;
+	public List<Products> GetAllProduct() {
+		String sql = "SELECT * FROM products ";
 		List<Products> listProducts = _jdbcTemplate.query(sql, new ProductsMapper());
 		return listProducts;
 	}
-
-	public List<Products> GetAllProduct() {
-		String sql = "SELECT * FROM products ";
+	
+	public List<Products> GetAllProductByPaginates(int start, int end) {
+		String sql = "SELECT * FROM products LIMIT "+ start + "," + end;
 		List<Products> listProducts = _jdbcTemplate.query(sql, new ProductsMapper());
 		return listProducts;
 	}

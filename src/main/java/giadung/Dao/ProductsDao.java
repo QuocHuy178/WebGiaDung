@@ -47,11 +47,10 @@ public class ProductsDao extends BaseDao {
 		List<Products> listProducts = _jdbcTemplate.query(sql, new ProductsMapper());
 		return listProducts;
 	}
-<<<<<<< HEAD
 	
 	public List<Products> GetAllProductPaginates(int start, int limit) {
 		String sql = "SELECT * FROM products LIMIT "+ (--start) + "," + limit;
-=======
+
 	public Products FindProductById(long id) {
 		String sql = "SELECT products.*, categories.name From products INNER JOIN categories ON products.id_category = categories.id Where products.id = "
 				+ id + "";
@@ -59,10 +58,4 @@ public class ProductsDao extends BaseDao {
 		return product;
 	}
 
-	public List<Products> GetAllProduct() {
-		String sql = "SELECT * FROM products ";
->>>>>>> Phat
-		List<Products> listProducts = _jdbcTemplate.query(sql, new ProductsMapper());
-		return listProducts;
-	}
 }

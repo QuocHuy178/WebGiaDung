@@ -34,36 +34,36 @@
 					</div>
 					<br class="clr" />
 					<div class="tab-content">
-
 						<div class="tab-pane  active" id="blockView">
 							<ul class="thumbnails">
 								<c:choose>
-									<c:when test="${ productsByCateAndPaginate.size() > 0 }">
-										<c:forEach var="item" items="${ productsByCateAndPaginate }"
+									<c:when test="${ productsByCatePaginate.size() > 0 }">
+										<c:forEach var="item" items="${ productsByCatePaginate }"
 											varStatus="loop">
 											<li class="span3">
 												<div class="thumbnail">
-											<a href='<c:url value="/product-details/${ item.id }"/>'>
-												<img class="radius products-item"
-												src="<c:url value="/"/>themes/images/products/${ item.image }"
-												alt="image_products" />
-											</a>
-											<div class="caption">
-												<h5>${ item.name }</h5>
-												<h4 style="text-align: center">
-													<div class="text-success" href="#">
-														<fmt:formatNumber type="number" groupingUsed="true"
-															value="${ item.price }" />
-														₫
-													</div>
-													<a class="btn btn-warning" href='<c:url value="/product-details/${ item.id }"/>'>
-														<i class="icon-zoom-in"></i>
-													</a> <a class="btn btn-primary" href="#">Thêm vào <i
-														class="icon-shopping-cart"></i>
+													<a href='<c:url value="/product-details/${ item.id }"/>'>
+														<img class="radius products-item"
+														src="<c:url value="/"/>themes/images/products/${ item.image }"
+														alt="image_products" />
 													</a>
-												</h4>
-											</div>
-										</div>
+													<div class="caption">
+														<h5>${ item.name }</h5>
+														<h4 style="text-align: center">
+															<div class="text-success" href="#">
+																<fmt:formatNumber type="number" groupingUsed="true"
+																	value="${ item.price }" />
+																₫
+															</div>
+															<a class="btn btn-warning"
+																href='<c:url value="/product-details/${ item.id }"/>'>
+																<i class="icon-zoom-in"></i>
+															</a> <a class="btn btn-primary" href="#">Thêm vào <i
+																class="icon-shopping-cart"></i>
+															</a>
+														</h4>
+													</div>
+												</div>
 											</li>
 										</c:forEach>
 									</c:when>
@@ -78,15 +78,31 @@
 						</div>
 					</div>
 
-					<div class="pagination">
+					<div class="pagination text-center">
 						<ul>
-							<li><a href="#">&lsaquo;</a></li>
-							<li><a href="#">1</a></li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#">...</a></li>
-							<li><a href="#">&rsaquo;</a></li>
+							<c:if test="${ currentPage != 1 }">
+								<li><a
+									href="<c:url value="/category/${ idCategory }?page=${ currentPage - 1 }"/>">&lsaquo;</a></li>
+							</c:if>
+							<c:forEach var="item" begin="1" end="${paginateInfo.totalPage }"
+								varStatus="loop">
+								<c:choose>
+									<c:when test="${loop.index == paginateInfo.currentPage }">
+										<li><a
+											href="<c:url value="/category/${ idCategory }?page=${ loop.index }"/>"
+											class="active">${loop.index}</a></li>
+									</c:when>
+									<c:otherwise>
+										<li><a
+											href="<c:url value="/category/${ idCategory }?page=${ loop.index }"/>">${loop.index}</a></li>
+									</c:otherwise>
+								</c:choose>
+								<!-- <li><a href="#">...</a></li> -->
+							</c:forEach>
+							<c:if test="${ currentPage < totalPage }">
+								<li><a
+									href="<c:url value="/category/${ idCategory }?page=${ currentPage + 1 }"/>">&rsaquo;</a></li>
+							</c:if>
 						</ul>
 					</div>
 					<br class="clr" />

@@ -48,8 +48,8 @@ public class ProductsDao extends BaseDao {
 		return listProducts;
 	}
 	
-	public List<Products> GetAllProductByPaginates(int start, int end) {
-		String sql = "SELECT * FROM products LIMIT "+ start + "," + end;
+	public List<Products> GetAllProductPaginates(int start, int limit) {
+		String sql = "SELECT * FROM products LIMIT "+ (--start) + "," + limit;
 		List<Products> listProducts = _jdbcTemplate.query(sql, new ProductsMapper());
 		return listProducts;
 	}

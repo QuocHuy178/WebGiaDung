@@ -16,12 +16,5 @@ public class HomeController extends BaseController {
 		_mvShare.addObject("productsNew", _homeService.GetDataProductsNew());
 		_mvShare.setViewName("user/index");
 		return _mvShare;
-	}
-	
-	@RequestMapping("/product")
-	public ModelAndView product() {
-		_mvShare.addObject("allProduct", _productService.GetAllProduct());
-		_mvShare.setViewName("user/product/product");
-		return _mvShare;
-	}
+	}	
 }

@@ -10,5 +10,5 @@ import giadung.Entity.Products;
 public interface ICategoryService {
 	public List<Products> GetProductByCate(int id);
 	
-	public List<Products> GetAllProductByCatePaginates(int id, int start, int end);
+	public List<Products> GetAllProductByCatePaginates(int id, int start, int limit);
 }

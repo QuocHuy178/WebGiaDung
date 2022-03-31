@@ -31,8 +31,8 @@ public class ProductServiceImpl implements IProductService {
 
 
 	@Override
-	public List<Products> GetAllProductByPaginate(int start, int end) {
+	public List<Products> GetAllProductPaginate(int start, int limit) {
 		// TODO Auto-generated method stub
-		return productsDao.GetAllProductByPaginates(start, end);
+		return productsDao.GetAllProductPaginates(start, limit);
 	}
 }

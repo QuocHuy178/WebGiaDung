@@ -13,5 +13,5 @@ public interface IProductService {
 	
 	public List<Products> GetAllProduct();
 	
-	public List<Products> GetAllProductByPaginate(int start, int end);
+	public List<Products> GetAllProductPaginate(int start, int limit);
 }

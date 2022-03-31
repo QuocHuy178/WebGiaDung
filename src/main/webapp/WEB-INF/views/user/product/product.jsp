@@ -38,8 +38,8 @@
 						<div class="tab-pane  active" id="blockView">
 							<ul class="thumbnails">
 								<c:choose>
-									<c:when test="${ allProduct.size() > 0 }">
-										<c:forEach var="item" items="${ allProduct }"
+									<c:when test="${ allProductsPaginate.size() > 0 }">
+										<c:forEach var="item" items="${ allProductsPaginate }"
 											varStatus="loop">
 											<li class="span3">
 												<div class="thumbnail">
@@ -78,15 +78,31 @@
 						</div>
 					</div>
 
-					<div class="pagination">
+					<div class="pagination text-center">
 						<ul>
-							<li><a href="#">&lsaquo;</a></li>
-							<li><a class="active" href="#">1</a></li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#">...</a></li>
-							<li><a href="#">&rsaquo;</a></li>
+							<c:if test="${ currentPage != 1 }">
+								<li><a
+									href="<c:url value="/product?page=${ currentPage - 1 }"/>">&lsaquo;</a></li>
+							</c:if>
+							<c:forEach var="item" begin="1" end="${paginateInfo.totalPage }"
+								varStatus="loop">
+								<c:choose>
+									<c:when test="${loop.index == paginateInfo.currentPage }">
+										<li><a
+											href="<c:url value="/product?page=${ loop.index }"/>"
+											class="active">${loop.index}</a></li>
+									</c:when>
+									<c:otherwise>
+										<li><a
+											href="<c:url value="/product?page=${ loop.index }"/>">${loop.index}</a></li>
+									</c:otherwise>
+								</c:choose>
+								<!-- <li><a href="#">...</a></li> -->
+							</c:forEach>
+							<c:if test="${ currentPage < totalPage }">
+								<li><a
+									href="<c:url value="/product?page=${ currentPage + 1 }"/>">&rsaquo;</a></li>
+							</c:if>
 						</ul>
 					</div>
 					<br class="clr" />

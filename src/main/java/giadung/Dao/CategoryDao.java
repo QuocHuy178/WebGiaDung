@@ -13,8 +13,8 @@ import giadung.Mapper.ProductsMapper;
 @Repository
 public class CategoryDao extends BaseDao {
 
-	private String getProByCate = "SELECT * FROM products as p INNER JOIN categories as c ON p.id_category = c.id WHERE p.id_category = ";
-	
+	private String _sqlGetProByCate = "SELECT * FROM products as p INNER JOIN categories as c ON p.id_category = c.id WHERE p.id_category = ";
+
 	public List<Categories> GetDataCategories() {
 		List<Categories> list = new ArrayList<Categories>();
 		String sql = "SELECT * FROM categories";
@@ -23,13 +23,13 @@ public class CategoryDao extends BaseDao {
 	}
 
 	public List<Products> GetProductByCate(int id) {
-		String sql = getProByCate + id;
+		String sql = _sqlGetProByCate + id;
 		List<Products> listProducts = _jdbcTemplate.query(sql, new ProductsMapper());
 		return listProducts;
 	}
 
-	public List<Products> GetAllProductByCatePaginates(int id, int start, int end) {
-		String sql = getProByCate + id + " LIMIT " + start + "," + end;
+	public List<Products> GetAllProductByCatePaginates(int id, int start, int limit) {
+		String sql = _sqlGetProByCate + id + " LIMIT " + (--start) + "," + limit;
 		List<Products> listProducts = _jdbcTemplate.query(sql, new ProductsMapper());
 		return listProducts;
 	}

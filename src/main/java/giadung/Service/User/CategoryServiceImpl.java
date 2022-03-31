@@ -22,8 +22,8 @@ public class CategoryServiceImpl implements ICategoryService {
 	}
 
 	@Override
-	public List<Products> GetAllProductByCatePaginates(int id, int start, int end) {
+	public List<Products> GetAllProductByCatePaginates(int id, int start, int limit) {
 		// TODO Auto-generated method stub
-		return categoryDao.GetAllProductByCatePaginates(id, start, end);
+		return categoryDao.GetAllProductByCatePaginates(id, start, limit);
 	}
 }

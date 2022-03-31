@@ -5,17 +5,11 @@
 
 <div id="sidebar" class="span3">
 	<div class="well well-small">
-<<<<<<< HEAD
-		<a id="myCart" href="product_summary.php"><img
-			src="<c:url value="/"/>themes/images/ico-cart.png" alt="cart">3 sản phẩm <span
-			class="badge badge-warning pull-right">$155.00</span></a>
-=======
 		<a id="myCart" href="<c:url value="/listcart"/>">
-		<img src="themes/images/ico-cart.png" alt="cart">${ TotalQuantyCart } sản phẩm 
+		<img src="<c:url value="/"/>themes/images/ico-cart.png" alt="cart">${ TotalQuantyCart } sản phẩm 
 		<%--<span class="badge badge-warning pull-right"><fmt:formatNumber type="number" groupingUsed="true" value="${ TotalPriceCart } " /> ₫
 		</span>--%>
 		 </a>
->>>>>>> Phat
 	</div>
 	<ul id="sideManu" class="nav nav-tabs nav-stacked">
 		<li class="subMenu open"><a> Danh mục (${cates.size()})</a>

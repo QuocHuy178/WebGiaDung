@@ -43,6 +43,7 @@
 											varStatus="loop">
 											<li class="span3">
 												<div class="thumbnail">
+<<<<<<< HEAD
 											<a href='<c:url value="/product-details/${ item.id }"/>'>
 												<img class="radius products-item"
 												src="<c:url value="/"/>themes/images/products/${ item.image }"
@@ -55,6 +56,29 @@
 														<fmt:formatNumber type="number" groupingUsed="true"
 															value="${ item.price }" />
 														₫
+=======
+													<a href='<c:url value="/product-details/${ item.id }"/>'>
+														<img
+														src="<c:url value="/"/>themes/images/products/${ item.image }"
+														alt="image_products" />
+													</a>
+													<div class="caption">
+														<h5>${ item.name }</h5>
+														<h4 style="text-align: center">
+															<div class="text-error" href="#"></div>
+															<a class="btn btn-warning"
+																href='<c:url value="/product-details/${ item.id }"/>'>
+																<i class="icon-zoom-in"></i>
+															</a> <a class="btn btn-primary" href="<c:url value="/AddCart/${ item.id}"/>">Thêm vào <i
+																class="icon-shopping-cart"></i>
+															</a>
+															<div class="text-success" href="#">
+																<fmt:formatNumber type="number" groupingUsed="true"
+																	value="${ item.price }" />
+																₫
+															</div>
+														</h4>
+>>>>>>> Phat
 													</div>
 													<a class="btn btn-warning" href='<c:url value="/product-details/${ item.id }"/>'>
 														<i class="icon-zoom-in"></i>

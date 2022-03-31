@@ -9,9 +9,9 @@
 			</div>
 			<div class="span6">
 				<div class="pull-right">
-					<a href="product_summary.php"><span
+					<a href="<c:url value="/listcart"/>"><span
 						class="btn btn-mini btn-primary"><i
-							class="icon-shopping-cart icon-white"></i> 3 sản phẩm trong giỏ
+							class="icon-shopping-cart icon-white"></i> ${ TotalQuantyCart } sản phẩm trong giỏ
 							hàng </span> </a>
 				</div>
 			</div>

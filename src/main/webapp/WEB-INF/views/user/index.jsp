@@ -94,7 +94,7 @@
 													<div class="text-error" href="#"></div>
 													<a class="btn btn-warning" href='<c:url value="/product-details/${ item.id }"/>'>
 														<i class="icon-zoom-in"></i>
-													</a> <a class="btn btn-primary" href="#">Thêm vào <i
+													</a> <a class="btn btn-primary" href="<c:url value="/AddCart/${ item.id}"/>">Thêm vào <i
 														class="icon-shopping-cart"></i>
 													</a>
 													<div class="text-success" href="#">

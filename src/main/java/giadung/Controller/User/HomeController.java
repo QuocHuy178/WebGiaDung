@@ -11,10 +11,10 @@ import giadung.Service.User.ProductServiceImpl;
 
 @Controller
 public class HomeController extends BaseController {
-	
+
 	@Autowired
 	ProductServiceImpl _productService;
-	
+
 	@RequestMapping(value = { "/", "/home" })
 	public ModelAndView Index() {
 		_mvShare.addObject("slides", _homeService.GetDataSlide());
@@ -26,7 +26,6 @@ public class HomeController extends BaseController {
 		_mvShare.setViewName("user/index");
 		return _mvShare;
 	}
-	
 
 	@RequestMapping("/product")
 	public ModelAndView product() {
@@ -34,12 +33,18 @@ public class HomeController extends BaseController {
 		_mvShare.setViewName("user/product/product");
 		return _mvShare;
 	}
-	
-	@RequestMapping("/category/{id}") 
+
+	@RequestMapping("/category/{id}")
 	public ModelAndView category(@PathVariable int id) {
 		_mvShare.addObject("productByCate", _productService.GetProductByIdCate(id));
 		_mvShare.setViewName("user/product/category");
 		return _mvShare;
 	}
+
+//	@RequestMapping("/cc")
+//	public String cc() {
+//		
+//		return "user/cart/product_summary";
+//	}
 
 }

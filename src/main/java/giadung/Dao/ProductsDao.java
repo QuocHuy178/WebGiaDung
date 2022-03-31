@@ -52,6 +52,12 @@ public class ProductsDao extends BaseDao {
 		List<Products> listProducts = _jdbcTemplate.query(sql, new ProductsMapper());
 		return listProducts;
 	}
+	public Products FindProductById(long id) {
+		String sql = "SELECT products.*, categories.name From products INNER JOIN categories ON products.id_category = categories.id Where products.id = "
+				+ id + "";
+		Products product = _jdbcTemplate.queryForObject(sql, new ProductsMapper());
+		return product;
+	}
 
 	public List<Products> GetAllProduct() {
 		String sql = "SELECT * FROM products ";

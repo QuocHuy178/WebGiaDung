@@ -6,6 +6,8 @@
 	<%@include file="../../layouts/user/slider.jsp"%>
 	<!-- Header End====================================================================== -->
 	<div id="mainBody">
+
+	
 		<div class="container">
 			<div class="row">
 				<!-- Sidebar ================================================== -->
@@ -37,7 +39,7 @@
 						<div class="span6">
 							<h3>${ product.name }</h3>
 							<hr class="soft" />
-							<form class="form-horizontal qtyFrm">
+							<form method="get" action="<c:url value="/AddCart/${ product.id}"/>" class="form-horizontal qtyFrm">
 								<div class="control-group">
 									<label class="control-label text-success fw-bold">
 										<span>
@@ -121,7 +123,7 @@
 															value="123456" />
 														₫</h3>
 
-														<div class="btn-group">
+														<di	v class="btn-group">
 															<a href="product_details.php"
 																class="btn btn-large btn-primary"> Thêm vào <i
 																class=" icon-shopping-cart"></i></a> <a

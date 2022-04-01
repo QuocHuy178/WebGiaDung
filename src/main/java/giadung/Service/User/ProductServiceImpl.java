@@ -17,18 +17,19 @@ public class ProductServiceImpl implements IProductService {
 
 	@Override
 	public Products GetProductById(long id) {
-		List<Products> listProducts = productsDao.GetProductById(id);
-		return listProducts.get(0);
-	}
+//		List<Products> listProducts = productsDao.GetProductById(id);
+//		return listProducts.get(0);
+		Products products = productsDao.GetProductById(id);
 
+		return products;
+	}
 
 	@Override
 	public List<Products> GetAllProduct() {
 		// TODO Auto-generated method stub
-		
+
 		return productsDao.GetAllProduct();
 	}
-
 
 	@Override
 	public List<Products> GetAllProductPaginate(int start, int limit) {

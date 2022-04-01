@@ -12,7 +12,7 @@
 			<!-- Sidebar end=============================================== -->
 			<div class="span9">
 				<ul class="breadcrumb">
-					<li><a href="index.php">Trang chủ</a> <span class="divider">/</span></li>
+					<li><a href="index">Trang chủ</a> <span class="divider">/</span></li>
 					<li class="active">Đăng ký</li>
 				</ul>
 				<h3>Đăng ký</h3>

@@ -78,6 +78,22 @@
 					</div>
 					<h4>Sản phẩm mới nhất</h4>
 					<ul class="thumbnails">
+<<<<<<< HEAD
+						<c:forEach var="item" items="${ productsnew }" varStatus="loop">
+							<li class="span3">
+								<div class="thumbnail">
+									<a href="/product_details/${ item.id }"> <img
+										src="<%=Common.path%>themes/images/products/${ item.image }"
+										alt="image_products" /></a>
+									<div class="caption">
+										<h5>${ item.name }</h5>
+										<h4 style="text-align: center">
+											<div class="text-error" href="#"></div>
+											<a class="btn btn-warning" href="product_details"> <i
+												class="icon-zoom-in"></i>
+											</a> <a class="btn btn-primary" href="#">Thêm vào <i
+												class="icon-shopping-cart"></i>
+=======
 						<c:choose>
 							<c:when test="${ productsNew.size() > 0 }">
 								<c:forEach var="item" items="${ productsNew }" varStatus="loop">
@@ -87,6 +103,7 @@
 												<img class="radius product-new"
 												src="<c:url value="/"/>themes/images/products/${ item.image }"
 												alt="image_products" />
+>>>>>>> 2a4ce94f439ff3b443429d76da920ddc2a6b31a3
 											</a>
 											<div class="caption">
 												<h5>${ item.name }</h5>

@@ -6,17 +6,17 @@
 		<div class="row">
 			<div class="span3">
 				<h5>Tài khoản</h5>
-				<a href="login.php">Tài khoản của bạn</a> <a href="login.php">Thông
-					tin</a> <a href="login.php">Lịch sử mua hàng</a>
+				<a href="login">Tài khoản của bạn</a> <a href="login">Thông
+					tin</a> <a href="login">Lịch sử mua hàng</a>
 			</div>
 			<div class="span3">
 				<h5>Thông tin</h5>
-				<a href="contact.php">Liên hệ</a> <a href="register.php">Đăng ký</a>
+				<a href="contact">Liên hệ</a> <a href="register">Đăng ký</a>
 			</div>
 			<div class="span3">
 				<h5>Cửa hàng</h5>
-				<a href="#">Sản phẩm mới</a> <a href="#">Top bán chạy</a> <a
-					href="special_offer.php">Sản phẩm đặc biệt</a>
+				<a href="product">Sản phẩm</a>
+				<a href="special_offer">Sản phẩm đặc biệt</a>
 			</div>
 			<div id="socialMedia" class="span3 pull-right">
 				<h5>Mạng xã hội</h5>

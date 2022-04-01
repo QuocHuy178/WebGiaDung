@@ -11,7 +11,7 @@
 			<!-- Sidebar end=============================================== -->
 			<div class="span9">
 				<ul class="breadcrumb">
-					<li><a href="index.php">Trang chủ</a> <span class="divider">/</span></li>
+					<li><a href="index">Trang chủ</a> <span class="divider">/</span></li>
 					<li class="active">Sản phẩm</li>
 				</ul>
 
@@ -40,13 +40,13 @@
 						
 							<li class="span3">
 								<div class="thumbnail">
-									<a href="product_details.php"><img
+									<a href="product_details"><img
 										src="themes/images/products/3.jpg" alt="" /></a>
 									<div class="caption">
 										<h5>Manicure &amp; Pedicure</h5>
 										<p>Mô tả.</p>
 										<h4 style="text-align: center">
-											<a class="btn" href="product_details.php"> <i
+											<a class="btn" href="product_details"> <i
 												class="icon-zoom-in"></i></a> <a class="btn" href="#">Thêm
 												vào <i class="icon-shopping-cart"></i>
 											</a> <a class="btn btn-primary" href="#">&euro;222.00</a>

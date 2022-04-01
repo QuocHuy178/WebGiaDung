@@ -12,11 +12,11 @@
 			<!-- Sidebar end=============================================== -->
 			<div class="span9">
 				<ul class="breadcrumb">
-					<li><a href="index.php">Trang chủ</a> <span class="divider">/</span></li>
+					<li><a href="index">Trang chủ</a> <span class="divider">/</span></li>
 					<li class="active">Giỏ hàng</li>
 				</ul>
 				<h3>
-					Giỏ hàng [ <small> 3 sản phẩm </small>]<a href="products.php"
+					Giỏ hàng [ <small> 3 sản phẩm </small>]<a href="products"
 						class="btn btn-large pull-right"><i class="icon-arrow-left"></i>
 						Trở lại trang sản phẩm </a>
 				</h3>
@@ -154,7 +154,7 @@
 					</table> -->
 
 
-				<a href="login.php" class="btn btn-large pull-right">Thanh toán
+				<a href="login" class="btn btn-large pull-right">Thanh toán
 					<i class="icon-arrow-right"></i>
 				</a>
 

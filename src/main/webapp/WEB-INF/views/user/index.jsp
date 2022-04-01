@@ -81,7 +81,7 @@
 										<h5>${ item.name }</h5>
 										<h4 style="text-align: center">
 											<div class="text-error" href="#"></div>
-											<a class="btn btn-warning" href="product_details.php"> <i
+											<a class="btn btn-warning" href="product_details"> <i
 												class="icon-zoom-in"></i>
 											</a> <a class="btn btn-primary" href="#">Thêm vào <i
 												class="icon-shopping-cart"></i>

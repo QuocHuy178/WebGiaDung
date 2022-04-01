@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <body>
-<h1 style="text-align: center;"> TEST ID THEO LOẠI : ${idCategory}</h1>
+
 	<%@include file="../layouts/user/slider.jsp"%>
 <!-- Header End====================================================================== -->
 <div id="mainBody">
@@ -15,7 +15,7 @@
 					<li><a href='<c:url value="/home"/>'> Trang chủ</a> <span class="divider">/</span></li>
 					<li class="active">Sản phẩm</li>
 				</ul>
-
+<h1 style="text-align: center;">${idCategory}</h1>
 				<hr class="soft" />
 				<form class="form-horizontal span6">
 					<div class="control-group">
@@ -41,13 +41,13 @@
 						
 							<li class="span3">
 								<div class="thumbnail">
-									<a href="product_details.php"><img
+									<a href="product_details"><img
 										src="themes/images/products/3.jpg" alt="" /></a>
 									<div class="caption">
 										<h5>Manicure &amp; Pedicure</h5>
 										<p>Mô tả.</p>
 										<h4 style="text-align: center">
-											<a class="btn" href="product_details.php"> <i
+											<a class="btn" href="product_details"> <i
 												class="icon-zoom-in"></i></a> <a class="btn" href="#">Thêm
 												vào <i class="icon-shopping-cart"></i>
 											</a> <a class="btn btn-primary" href="#">&euro;222.00</a>
@@ -59,7 +59,8 @@
 						<hr class="soft" />
 					</div>
 				</div>
-
+				
+				<!-- phan trang -->
 				<div class="pagination">
 					<ul>
 						<li><a href="#">&lsaquo;</a></li>
@@ -71,6 +72,7 @@
 						<li><a href="#">&rsaquo;</a></li>
 					</ul>
 				</div>
+				
 				<br class="clr" />
 			</div>
 		</div>

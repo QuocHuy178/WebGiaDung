@@ -11,7 +11,7 @@
 			</div>
 			<div class="span6">
 				<div class="pull-right">
-					<a href="product_summary.php"><span
+					<a href="product_summary"><span
 						class="btn btn-mini btn-primary"><i
 							class="icon-shopping-cart icon-white"></i> 3 sản phẩm trong giỏ
 							hàng </span> </a>
@@ -26,12 +26,12 @@
 			</a>
 			<div class="navbar-inner">
 				<a class="brand" href='<c:url value="/home"/>'><img
-					src="<%=Common.path%>themes/images/logo.png" alt="Bootsshop" /></a>
+					src="<%=Common.path%>themes/images/logo.png" alt="ThuanFastStore" /></a>
 				<form class="form-inline navbar-search" method="post"
-					action="products.php">
+					action="href='<c:url value="product"/>'">
 					<input id="srchFld" class="srchTxt" type="text" /> <select
 						class="srchTxt">
-						<option>Tất cả</option>
+						<option>Tất cả</option>	
 						<option>Áo</option>
 						<option>Quần</option>
 					</select>
@@ -40,8 +40,8 @@
 				</form>
 				<ul id="topMenu" class="nav pull-right">
 					<li class=""><a href="product">Sản phẩm</a></li>
-					<li class=""><a href="normal.php">Đặt hàng</a></li>
-					<li class=""><a href="contact.php">Liên hệ</a></li>
+					<li class=""><a href="special_offer">Đặc biệt</a></li>
+					<li class=""><a href="contact">Liên hệ</a></li>
 					<li class=""><a href="#login" role="button"
 						data-toggle="modal" style="padding-right: 0"><span
 							class="btn btn-large btn-success">Đăng nhập</span></a>

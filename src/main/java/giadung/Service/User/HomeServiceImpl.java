@@ -55,15 +55,8 @@ public class HomeServiceImpl implements IHomeService {
 	@Override
 	public List<ProductsDto> getDataProductsSideBar() {
 		// TODO Auto-generated method stub
-		List<ProductsDto> listProducts = productsDao.getDataProductsNew();
+		List<ProductsDto> listProducts = productsDao.getDataProductsSideBar();
 		return listProducts;
 	}
-
-//	@Override
-//	public List<ProductsDto> getDataAllProductsById() {
-//		// TODO Auto-generated method stub
-//		List<ProductsDto> listCategoryById = productsDao.getDataAllProductsById();
-//		return listCategoryById;
-//	}
 
 }

@@ -1,24 +1,30 @@
 package giadung.Controller.User;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import giadung.Service.User.ProductServiceImpl;
+
+
 @Controller
 public class HomeController extends BaseController {
-	
+
+
+	@Autowired
+	ProductServiceImpl _productService;
+
 	@RequestMapping(value = { "/", "/home" })
 	public ModelAndView Index() {
-		_mvShare.addObject("slides", _homeService.GetDataSlide());
-		_mvShare.addObject("cates", _homeService.getDataCategories());
-		_mvShare.addObject("products", _homeService.getDataProductsHot());
-		_mvShare.addObject("productshot", _homeService.getDataProductsHotLast());
-		_mvShare.addObject("productsnew", _homeService.getDataProductsNew());
-		_mvShare.addObject("productssidebar", _homeService.getDataProductsSideBar());
+		_mvShare.addObject("productsHot", _homeService.GetDataProductsHot());
+		_mvShare.addObject("productsHotLast", _homeService.GetDataProductsHotLast());
+		_mvShare.addObject("productsNew", _homeService.GetDataProductsNew());
 		_mvShare.setViewName("user/index");
 		return _mvShare;
 	}
+<<<<<<< HEAD
 	@RequestMapping("/product")
 	public ModelAndView product() {
 		ModelAndView mv = new ModelAndView("user/product");
@@ -59,4 +65,6 @@ public class HomeController extends BaseController {
 		ModelAndView mv = new ModelAndView("user/product_summary");
 		return mv;
 	}
+=======
+>>>>>>> 2a4ce94f439ff3b443429d76da920ddc2a6b31a3
 }

@@ -1,8 +1,6 @@
-<%@page import="giadung.common.Common"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%-- <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator"
-	prefix="decorator"%> --%>
+<%@include file="/WEB-INF/views/layouts/user/tablib.jsp"%>
 <div id="header">
 	<div class="container">
 		<div id="welcomeLine" class="row">
@@ -11,9 +9,13 @@
 			</div>
 			<div class="span6">
 				<div class="pull-right">
+<<<<<<< HEAD
 					<a href="product_summary"><span
+=======
+					<a href="<c:url value="/listcart"/>"><span
+>>>>>>> 2a4ce94f439ff3b443429d76da920ddc2a6b31a3
 						class="btn btn-mini btn-primary"><i
-							class="icon-shopping-cart icon-white"></i> 3 sản phẩm trong giỏ
+							class="icon-shopping-cart icon-white"></i> ${ TotalQuantyCart } sản phẩm trong giỏ
 							hàng </span> </a>
 				</div>
 			</div>
@@ -26,22 +28,40 @@
 			</a>
 			<div class="navbar-inner">
 				<a class="brand" href='<c:url value="/home"/>'><img
+<<<<<<< HEAD
 					src="<%=Common.path%>themes/images/logo.png" alt="ThuanFastStore" /></a>
+=======
+					src="<c:url value="/"/>themes/images/logo.png" alt="Bootsshop" /></a>
+>>>>>>> 2a4ce94f439ff3b443429d76da920ddc2a6b31a3
 				<form class="form-inline navbar-search" method="post"
 					action="href='<c:url value="product"/>'">
 					<input id="srchFld" class="srchTxt" type="text" /> <select
+<<<<<<< HEAD
 						class="srchTxt">
 						<option>Tất cả</option>	
 						<option>Áo</option>
 						<option>Quần</option>
+=======
+						class="srchTxt" name="options">
+						<option value="">-- Lọc --</option>
+						<c:forEach var="item" items="${ cates }" varStatus="index">
+							<option value="${ item.id }">${ item.name }</option>
+						</c:forEach>
+>>>>>>> 2a4ce94f439ff3b443429d76da920ddc2a6b31a3
 					</select>
 					<button type="submit" id="submitButton" class="btn btn-primary">Tìm
 						kiếm</button>
 				</form>
 				<ul id="topMenu" class="nav pull-right">
+<<<<<<< HEAD
 					<li class=""><a href="product">Sản phẩm</a></li>
 					<li class=""><a href="special_offer">Đặc biệt</a></li>
 					<li class=""><a href="contact">Liên hệ</a></li>
+=======
+					<li class=""><a href='<c:url value="/product"/>'>Sản phẩm</a></li>
+					<li class=""><a href="normal.php">Đặt hàng</a></li>
+					<li class=""><a href="contact.php">Liên hệ</a></li>
+>>>>>>> 2a4ce94f439ff3b443429d76da920ddc2a6b31a3
 					<li class=""><a href="#login" role="button"
 						data-toggle="modal" style="padding-right: 0"><span
 							class="btn btn-large btn-success">Đăng nhập</span></a>

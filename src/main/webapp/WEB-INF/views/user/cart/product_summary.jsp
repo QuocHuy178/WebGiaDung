@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@include file="/WEB-INF/views/layouts/user/tablib.jsp"%>
 <body>
-<%@include file="../../layouts/user/slider.jsp"%>
+<%-- <%@include file="../../layouts/user/slider.jsp"%> --%>
 <!-- Header End====================================================================== -->
 <div id="mainBody">
 	<div class="container">

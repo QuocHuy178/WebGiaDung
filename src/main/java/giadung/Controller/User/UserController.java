@@ -1,5 +1,8 @@
 package giadung.Controller.User;
 
+
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,17 +14,17 @@ import giadung.Service.User.AccountServiceImpl;
 
 @Controller
 public class UserController extends BaseController {
-
+	@Autowired
 	AccountServiceImpl accountService = new AccountServiceImpl();
 
-	@RequestMapping(value = "/register", method = RequestMethod.GET)
-	public ModelAndView Dangky() {
+	@RequestMapping(value = "/dang-ky", method = RequestMethod.GET)
+	public ModelAndView Register() {
 		_mvShare.setViewName("user/account/register");
 		_mvShare.addObject("user", new Users());
 		return _mvShare;
 	}
 
-	@RequestMapping(value = "/register", method = RequestMethod.POST)
+	@RequestMapping(value = "/dang-ky", method = RequestMethod.POST)
 	public ModelAndView CreateAcc(@ModelAttribute("user") Users user) {
 		int count = accountService.AddAccount(user);
 		if (count > 0) {
@@ -33,11 +36,10 @@ public class UserController extends BaseController {
 		_mvShare.setViewName("user/account/register");
 		return _mvShare;
 	}
-
-	@RequestMapping("/forgetpass")
-	public ModelAndView forgotpass() {
-		ModelAndView mv = new ModelAndView("user/account/forgetpass");
-		return mv;
-	}
+//	@RequestMapping("/forgetpass")
+//	public ModelAndView forgotpass() {
+//		ModelAndView mv = new ModelAndView("user/account/forgetpass");
+//		return mv;
+//	}
 
 }

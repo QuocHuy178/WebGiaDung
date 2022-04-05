@@ -77,7 +77,7 @@
 							</div>
 						</div>
 						</li>
-						<li class=""><a href='<c:url value="/register/"/>' role="button"
+						<li class=""><a href='<c:url value="/dang-ky"/>' role="button"
 						data-toggle="modal" style="padding-right: 0">
 						<span
 							class="btn btn-large btn-success ">Đăng ký

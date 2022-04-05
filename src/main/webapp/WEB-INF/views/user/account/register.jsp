@@ -13,19 +13,19 @@
 					<ul class="breadcrumb">
 						<li><a href='<c:url value="/home"/>'>Trang chủ</a> <span
 							class="divider">/</span></li>
-						<li class="active">Đăng nhập</li>
+						<li class="active">Đăng Kí</li>
 					</ul>
 					<div class="row">
 						<!-- dangky -->
 						<div class="span4">
 							<div class="well">
 								<h5>Tạo tài khoản</h5>
-								<%-- <form:form action="register" method="POST" modelAttribute="user"> --%>
+								 <form:form action="dang-ky" method="POST" modelAttribute="user">
 									<div class="control-group">
 										<label class="control-label" for="inputEmail0">E-mail</label>
 										<div class="controls">
-											<form:input type="email" path="user" class="span3"
-												placeholder="Nhập Email của bạn" />
+											<form:input type="email" class="span3"
+												placeholder="Nhập Email của bạn" path="user" />
 										</div>
 
 										<label class="control-label" for="inputEmail1">Mật
@@ -51,38 +51,7 @@
 												ký thành viên</button>
 										</div>
 									</div>
-							<%-- 	</form:form> --%>
-							</div>
-						</div>
-
-						<!-- dangnhap -->
-						<div class="span1">&nbsp;</div>
-						<div class="span4">
-							<div class="well">
-								<h5>Đã có tài khoản ?</h5>
-								<form>
-									<div class="control-group">
-										<label class="control-label" for="inputEmail1">Email</label>
-										<div class="controls">
-											<input class="span3" type="text" id="inputEmail1"
-												placeholder="Email">
-										</div>
-									</div>
-									<div class="control-group">
-										<label class="control-label" for="inputPassword1">Mật
-											khẩu</label>
-										<div class="controls">
-											<input type="password" class="span3" id="inputPassword1"
-												placeholder="Mật khẩu">
-										</div>
-									</div>
-									<div class="control-group">
-										<div class="controls">
-											<button type="submit" class="btn">Đăng nhập</button>
-											<a href="forgetpass">Quên mật khẩu ?</a>
-										</div>
-									</div>
-								</form>
+								</form:form>
 							</div>
 						</div>
 					</div>

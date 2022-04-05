@@ -44,17 +44,17 @@ public class CartController  extends BaseController{
 		return "redirect:"+request.getHeader("Referer");
 	}
 	
-	@RequestMapping(value =  "EditCart/{id}")
+	@RequestMapping(value =  "EditCart/{id}/{quanty}")
 	
-	public String EditCart(HttpServletRequest request, HttpSession session, @PathVariable long id) {
+	public String EditCart(HttpServletRequest request, HttpSession session, @PathVariable long id, @PathVariable int quanty) {
 		HashMap<Long, Carts> cart = (HashMap<Long, Carts>)session.getAttribute("Cart");
 		if(cart == null) {
 			cart = new HashMap<Long, Carts>();
 		}
-//		cart =  cartServiceImpl.EditCart(id,quanty, cart);
-//		session.setAttribute("Cart", cart); 
-//		session.setAttribute("TotalQuantyCart", cartServiceImpl.TotalQuanty(cart)); 
-//		session.setAttribute("TotalPriceCart", cartServiceImpl.TotalPrice(cart)); 
+		cart =  cartServiceImpl.EditCart(id,quanty, cart);
+		session.setAttribute("Cart", cart); 
+		session.setAttribute("TotalQuantyCart", cartServiceImpl.TotalQuanty(cart)); 
+		session.setAttribute("TotalPriceCart", cartServiceImpl.TotalPrice(cart)); 
 //		return "redirect:/product-details/"+id;
 		return "redirect:"+request.getHeader("Referer");
 	}

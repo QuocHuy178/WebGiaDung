@@ -55,12 +55,7 @@ public class HomeServiceImpl implements IHomeService {
 	@Override
 	public List<Products> GetDataProductsSideBar() {
 		// TODO Auto-generated method stub
-<<<<<<< HEAD
-		List<ProductsDto> listProducts = productsDao.getDataProductsSideBar();
-		return listProducts;
-	}
 
-=======
 		List<Products> listProducts = productsDao.GetDataProductsSideBar();
 		return listProducts;
 	}
@@ -72,5 +67,5 @@ public class HomeServiceImpl implements IHomeService {
 //		return listCategoryById;
 //	}
 
->>>>>>> 2a4ce94f439ff3b443429d76da920ddc2a6b31a3
+
 }

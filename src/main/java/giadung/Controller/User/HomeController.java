@@ -24,29 +24,19 @@ public class HomeController extends BaseController {
 		_mvShare.setViewName("user/index");
 		return _mvShare;
 	}
-<<<<<<< HEAD
-	@RequestMapping("/product")
-	public ModelAndView product() {
-		ModelAndView mv = new ModelAndView("user/product");
-		return mv;
-	}
+
 	@RequestMapping("/special_offer")
 	public ModelAndView special_offer() {
-		ModelAndView mv = new ModelAndView("user/special_offer");
+		ModelAndView mv = new ModelAndView("user/account/special_offer");
 		return mv;
 	}
 	
 	@RequestMapping("/register")
 	public ModelAndView register() {
-		ModelAndView mv = new ModelAndView("user/register");
+		ModelAndView mv = new ModelAndView("user/account/register");
 		return mv;
 	}
-	@RequestMapping("/category/{id}") 
-	public ModelAndView category(@PathVariable String id) {
-		ModelAndView mv = new ModelAndView("user/category");
-		mv.addObject("idCategory", id);
-		return mv;
-	}
+
 	
 	@RequestMapping("/contact")
 	public ModelAndView contact() {
@@ -56,15 +46,14 @@ public class HomeController extends BaseController {
 	
 	@RequestMapping("/login")
 	public ModelAndView login() {
-		ModelAndView mv = new ModelAndView("user/login");
+		ModelAndView mv = new ModelAndView("user/account/login");
 		return mv;
 	}
 	
 	@RequestMapping("/product_summary")
 	public ModelAndView product_summary() {
-		ModelAndView mv = new ModelAndView("user/product_summary");
+		ModelAndView mv = new ModelAndView("user/cart/product_summary");
 		return mv;
 	}
-=======
->>>>>>> 2a4ce94f439ff3b443429d76da920ddc2a6b31a3
+
 }

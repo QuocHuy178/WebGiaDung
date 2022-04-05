@@ -1,72 +1,55 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@include file="/WEB-INF/views/layouts/user/tablib.jsp"%>
 <body>
-<%@include file="../../layouts/user/slider.jsp"%>
-<!-- Header End====================================================================== -->
-<div id="mainBody">
-	<div class="container">
-		<div class="row">
-			<!-- Sidebar ================================================== -->
-		<%@include file="../../layouts/user/sidebar.jsp"%>
-			<!-- Sidebar end=============================================== -->
-			<div class="span9">
-				<ul class="breadcrumb">
-					<li><a href="index">Trang chủ</a> <span class="divider">/</span></li>
-					<li class="active">Đăng nhập</li>
-				</ul>
-				<h3> Đăng nhập</h3>
-				<hr class="soft" />
+	<!-- Header End====================================================================== -->
+	<div id="mainBody">
+		<div class="container">
+			<div class="row">
+				<!-- Sidebar ================================================== -->
+				<%@include file="../../layouts/user/sidebar.jsp"%>
+				<!-- Sidebar end=============================================== -->
+				<div class="span9">
+					<ul class="breadcrumb">
+						<li><a href='<c:url value="/home"/>'>Trang chủ</a> <span class="divider">/</span></li>
+						<li class="active">Đăng nhập</li>
+					</ul>
+					<div class="row">
+						<div class="span4">
+							<div class="well">
+								<h5>Bạn đã có tài khoản?</h5>
+								<form>
+									<div class="control-group">
+										<label class="control-label" for="inputEmail1">Email</label>
+										<div class="controls">
+											<input class="span3" type="text" id="inputEmail1"
+												placeholder="Email">
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="inputPassword1">Mật
+											khẩu</label>
+										<div class="controls">
+											<input type="password" class="span3" id="inputPassword1"
+												placeholder="Mật khẩu">
+										</div>
+									</div>
+									<div class="control-group">
+										<div class="controls">
+											<button type="submit" class="btn">Đăng nhập</button>
+											<a href="'<c:url value="/forgetpass"/>'">Quên mật khẩu ?</a>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
 
-				<div class="row">
-					<div class="span4">
-						<div class="well">
-							<h5>Tạo tài khoản</h5><br />
-							Nhập email để tạo tài khoản của bạn.<br /><br /><br />
-							<form action="register">
-								<div class="control-group">
-									<label class="control-label" for="inputEmail0">E-mail</label>
-									<div class="controls">
-										<input class="span3" type="text" id="inputEmail0" placeholder="Email">
-									</div>
-								</div>
-								<div class="controls">
-									<button type="submit" class="btn block">Đăng ký</button>
-								</div>
-							</form>
-						</div>
-					</div>
-					<div class="span1"> &nbsp;</div>
-					<div class="span4">
-						<div class="well">
-							<h5>Đã có tài khoản ?</h5>
-							<form>
-								<div class="control-group">
-									<label class="control-label" for="inputEmail1">Email</label>
-									<div class="controls">
-										<input class="span3" type="text" id="inputEmail1" placeholder="Email">
-									</div>
-								</div>
-								<div class="control-group">
-									<label class="control-label" for="inputPassword1">Mật khẩu</label>
-									<div class="controls">
-										<input type="password" class="span3" id="inputPassword1" placeholder="Mật khẩu">
-									</div>
-								</div>
-								<div class="control-group">
-									<div class="controls">
-										<button type="submit" class="btn">Đăng nhập</button> <a href="forgetpass">Quên mật khẩu ?</a>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>
-</div>
-<!-- MainBody End ============================= -->
-<!-- Footer ================================================================== -->
+	<!-- MainBody End ============================= -->
+	<!-- Footer ================================================================== -->
 </body>

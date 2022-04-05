@@ -65,18 +65,20 @@
 	<decorator:body />
 
 	<%@include file="/WEB-INF/views/layouts/user/footer.jsp"%>
-
+	<!-- Placed at the end of the document so the pages load faster ============================================= -->
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<script src="<c:url value="/"/>themes/js/jquery.js"
+		type="text/javascript"></script>
+	<script src="<c:url value="/"/>themes/js/bootstrap.min.js"
+		type="text/javascript"></script>
+	<script
+		src="<c:url value="/"/>themes/js/google-code-prettify/prettify.js"></script>
+	<script src="<c:url value="/"/>themes/js/bootshop.js"></script>
+	<script src="<c:url value="/"/>themes/js/jquery.lightbox-0.5.js"></script>
+	<script src="<c:url value="/"/>themes/switch/theamswitcher.js"
+		type="text/javascript" charset="utf-8"></script>
+		
+	<decorator:getProperty property="page.script"></decorator:getProperty>
 </body>
-<!-- Placed at the end of the document so the pages load faster ============================================= -->
-<script src="https://code.jquery.com/jquery-latest.js"></script>
-<script src="<c:url value="/"/>themes/js/jquery.js"
-	type="text/javascript"></script>
-<script src="<c:url value="/"/>themes/js/bootstrap.min.js"
-	type="text/javascript"></script>
-<script
-	src="<c:url value="/"/>themes/js/google-code-prettify/prettify.js"></script>
-<script src="<c:url value="/"/>themes/js/bootshop.js"></script>
-<script src="<c:url value="/"/>themes/js/jquery.lightbox-0.5.js"></script>
-<script src="<c:url value="/"/>themes/switch/theamswitcher.js"
-	type="text/javascript" charset="utf-8"></script>
+
 </html>

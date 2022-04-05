@@ -51,3 +51,7 @@ img.products-item {
 .fw-bold {
 	font-weight: bold;
 }
+
+.brand img{
+	width:140px;
+}

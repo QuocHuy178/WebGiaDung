@@ -1,4 +1,4 @@
-package giadung.Dto;
+package giadung.Mapper;
 
 public class PaginatesDto {
 	private int currentPage, limit, start, end, totalPage ;

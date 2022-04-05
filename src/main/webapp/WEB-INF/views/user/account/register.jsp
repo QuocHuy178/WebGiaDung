@@ -1,114 +1,96 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+	<%@include file="/WEB-INF/views/layouts/user/tablib.jsp"%>
 <body>
-<%@include file="../../layouts/user/slider.jsp"%>
-<!-- Header End====================================================================== -->
-<div id="mainBody">
-	<div class="container">
-		<div class="row">
-			<!-- Sidebar ================================================== -->
-			<%@include file="../../layouts/user/sidebar.jsp"%>
-			<!-- Sidebar end=============================================== -->
-			<div class="span9">
-				<ul class="breadcrumb">
-					<li><a href="index">Trang chủ</a> <span class="divider">/</span></li>
-					<li class="active">Đăng ký</li>
-				</ul>
-				<h3>Đăng ký</h3>
-				<div class="well">
-					<!--
-	<div class="alert alert-info fade in">
-		<button type="button" class="close" data-dismiss="alert">×</button>
-		<strong>Lorem Ipsum is simply dummy</strong> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-	 </div>
-	<div class="alert fade in">
-		<button type="button" class="close" data-dismiss="alert">×</button>
-		<strong>Lorem Ipsum is simply dummy</strong> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-	 </div>
-	 <div class="alert alert-block alert-error fade in">
-		<button type="button" class="close" data-dismiss="alert">×</button>
-		<strong>Lorem Ipsum is simply</strong> dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-	 </div> -->
-					<form class="form-horizontal">
-						<div class="control-group">
-							<label class="control-label" for="inputFname1">Họ tên <sup>*</sup></label>
-							<div class="controls">
-								<input type="text" id="inputFname1" placeholder="Họ tên">
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="input_email">Email <sup>*</sup></label>
-							<div class="controls">
-								<input type="text" id="input_email" placeholder="Email">
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="inputPassword1">Mật
-								khẩu <sup>*</sup>
-							</label>
-							<div class="controls">
-								<input type="password" id="inputPassword1"
-									placeholder="Mật khẩu">
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="inputPassword1">Nhập
-								lại mật khẩu <sup>*</sup>
-							</label>
-							<div class="controls">
-								<input type="password" id="inputPassword1"
-									placeholder="Nhập lại mật khẩu">
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label">Ngày sinh <sup>*</sup></label>
-							<div class="controls">
-								<select class="span1" name="days">
-									<option value="">-</option>
-									<option value="1">1&nbsp;&nbsp;</option>
-									<option value="2">2&nbsp;&nbsp;</option>
-									<option value="3">3&nbsp;&nbsp;</option>
-									<option value="4">4&nbsp;&nbsp;</option>
-									<option value="5">5&nbsp;&nbsp;</option>
-									<option value="6">6&nbsp;&nbsp;</option>
-									<option value="7">7&nbsp;&nbsp;</option>
-								</select> <select class="span1" name="days">
-									<option value="">-</option>
-									<option value="1">1&nbsp;&nbsp;</option>
-									<option value="2">2&nbsp;&nbsp;</option>
-									<option value="3">3&nbsp;&nbsp;</option>
-									<option value="4">4&nbsp;&nbsp;</option>
-									<option value="5">5&nbsp;&nbsp;</option>
-									<option value="6">6&nbsp;&nbsp;</option>
-									<option value="7">7&nbsp;&nbsp;</option>
-								</select> <select class="span1" name="days">
-									<option value="">-</option>
-									<option value="1">1&nbsp;&nbsp;</option>
-									<option value="2">2&nbsp;&nbsp;</option>
-									<option value="3">3&nbsp;&nbsp;</option>
-									<option value="4">4&nbsp;&nbsp;</option>
-									<option value="5">5&nbsp;&nbsp;</option>
-									<option value="6">6&nbsp;&nbsp;</option>
-									<option value="7">7&nbsp;&nbsp;</option>
-								</select>
+	<!-- Header End====================================================================== -->
+	<div id="mainBody">
+		<div class="container">
+			<div class="row">
+				<!-- Sidebar ================================================== -->
+				<%@include file="../../layouts/user/sidebar.jsp"%>
+				<!-- Sidebar end=============================================== -->
+				<div class="span9">
+					<ul class="breadcrumb">
+						<li><a href='<c:url value="/home"/>'>Trang chủ</a> <span
+							class="divider">/</span></li>
+						<li class="active">Đăng nhập</li>
+					</ul>
+					<div class="row">
+						<!-- dangky -->
+						<div class="span4">
+							<div class="well">
+								<h5>Tạo tài khoản</h5>
+								<%-- <form:form action="register" method="POST" modelAttribute="user"> --%>
+									<div class="control-group">
+										<label class="control-label" for="inputEmail0">E-mail</label>
+										<div class="controls">
+											<form:input type="email" path="user" class="span3"
+												placeholder="Nhập Email của bạn" />
+										</div>
+
+										<label class="control-label" for="inputEmail1">Mật
+											khẩu</label>
+										<div class="controls">
+											<form:input type="password" path="password" class="span3"
+												placeholder="Nhập mật khẩu của bạn" />
+										</div>
+
+										<label class="control-label" for="name">Họ và Tên</label>
+										<div class="controls">
+											<form:input type="text" path="display_name" class="span3"
+												placeholder="Nhập họ và tên của bạn" />
+
+											<label class="control-label" for="name">Địa chỉ</label>
+											<div class="controls">
+												<form:input type="text" path="address" class="span3"
+													placeholder="Nhập địa chỉ của bạn" />
+											</div>
+										</div>
+										<div class="controls">
+											<button type="submit" class="btn block btn-info">Đăng
+												ký thành viên</button>
+										</div>
+									</div>
+							<%-- 	</form:form> --%>
 							</div>
 						</div>
 
-						<div class="control-group">
-							<div class="controls">
-								<input type="hidden" name="email_create" value="1"> <input
-									type="hidden" name="is_new_customer" value="1"> <input
-									class="btn btn-large btn-success" type="submit" value="Đăng ký" />
+						<!-- dangnhap -->
+						<div class="span1">&nbsp;</div>
+						<div class="span4">
+							<div class="well">
+								<h5>Đã có tài khoản ?</h5>
+								<form>
+									<div class="control-group">
+										<label class="control-label" for="inputEmail1">Email</label>
+										<div class="controls">
+											<input class="span3" type="text" id="inputEmail1"
+												placeholder="Email">
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="inputPassword1">Mật
+											khẩu</label>
+										<div class="controls">
+											<input type="password" class="span3" id="inputPassword1"
+												placeholder="Mật khẩu">
+										</div>
+									</div>
+									<div class="control-group">
+										<div class="controls">
+											<button type="submit" class="btn">Đăng nhập</button>
+											<a href="forgetpass">Quên mật khẩu ?</a>
+										</div>
+									</div>
+								</form>
 							</div>
 						</div>
-					</form>
+					</div>
+
 				</div>
-
 			</div>
 		</div>
 	</div>
-</div>
-<!-- MainBody End ============================= -->
-<!-- Footer ================================================================== -->
+	<!-- MainBody End ============================= -->
+	<!-- Footer ================================================================== -->
 </body>

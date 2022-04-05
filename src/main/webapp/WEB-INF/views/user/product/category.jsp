@@ -48,7 +48,7 @@
 														alt="image_products" />
 													</a>
 													<div class="caption">
-														<h5>${ item.name }</h5>
+														<h5 class="text-1-line">${ item.name }</h5>
 														<h4 style="text-align: center">
 															<div class="text-success" href="#">
 																<fmt:formatNumber type="number" groupingUsed="true"

@@ -5,15 +5,17 @@
 	<div class="container">
 		<div id="welcomeLine" class="row">
 			<div class="span6">
-				Chào mừng <strong> Phát</strong>
+				<c:if test="${not empty LoginInfo }">
+					Xin chào <strong>${LoginInfo.display_name}</strong>, Chúc bạn một ngày tốt lành!
+				</c:if>
 			</div>
+
 			<div class="span6">
 				<div class="pull-right">
-
 					<a href="<c:url value="/listcart"/>"><span
 						class="btn btn-mini btn-primary"><i
-							class="icon-shopping-cart icon-white"></i> ${ TotalQuantyCart } sản phẩm trong giỏ
-							hàng </span> </a>
+							class="icon-shopping-cart icon-white"></i> ${ TotalQuantyCart }
+							sản phẩm trong giỏ hàng </span> </a>
 				</div>
 			</div>
 		</div>
@@ -25,12 +27,14 @@
 			</a>
 			<div class="navbar-inner">
 				<a class="brand" href='<c:url value="/home"/>'><img
-					src="<c:url value="/"/>themes/images/giadunglogo.png" alt="ThuanFastStore"/></a>
+					src="<c:url value="/"/>themes/images/giadunglogo.png"
+					alt="ThuanFastStore" /></a>
 
 				<form class="form-inline navbar-search" method="post"
 					action="href='<c:url value="product"/>'">
-					<input placeholder="Tìm kiếm sản phẩm..." id="srchFld" class="srchTxt" type="text" /> <select
-						class="srchTxt" name="options">
+					<input placeholder="Tìm kiếm sản phẩm..." id="srchFld"
+						class="srchTxt" type="text" /> <select class="srchTxt"
+						name="options">
 						<option value="">-- Lọc --</option>
 						<c:forEach var="item" items="${ cates }" varStatus="index">
 							<option value="${ item.id }">${ item.name }</option>
@@ -44,45 +48,45 @@
 					<li class=""><a href='<c:url value="/product"/>'>Sản phẩm</a></li>
 					<li class=""><a href="normal">Đặt hàng</a></li>
 					<li class=""><a href="contact">Liên hệ</a></li>
-					<li class=""><a href='<c:url value="/login/"/>' role="button"
-						data-toggle="modal" style="padding-right: 0">
-						<span
-							class="btn btn-large btn-success">Đăng nhập
-						</span>
-							</a>
-						<div id="login" class="modal hide fade in" tabindex="-1"
-							role="dialog" aria-labelledby="login" aria-hidden="false">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal"
-									aria-hidden="true">×</button>
-								<h3>Đăng nhập</h3>
-							</div>
-							<div class="modal-body">
-								<form class="form-horizontal loginFrm">
-									<div class="control-group">
-										<input type="text" id="inputEmail" placeholder="Email">
-									</div>
-									<div class="control-group">
-										<input type="password" id="inputPassword"
-											placeholder="Mật khẩu">
-									</div>
-									<div class="control-group">
-										<label class="checkbox"> <input type="checkbox">
-											Ghi nhớ
-										</label>
-									</div>
-								</form>
-								<button type="submit" class="btn btn-success">Đăng nhập</button>
-								<button class="btn" data-dismiss="modal" aria-hidden="true">Đóng</button>
-							</div>
-						</div>
-						</li>
-						<li class=""><a href='<c:url value="/dang-ky"/>' role="button"
-						data-toggle="modal" style="padding-right: 0">
-						<span
-							class="btn btn-large btn-success ">Đăng ký
-						</span>
-							</a></li>
+					<c:if test="${empty LoginInfo }">
+						<li class=""><a href='<c:url value="/dang-ky"/>'
+							role="button" data-toggle="modal" style="padding-right: 0"> <span
+								class="btn btn-large btn-success">Tài khoản </span>
+						</a>
+							<div id="login" class="modal hide fade in" tabindex="-1"
+								role="dialog" aria-labelledby="login" aria-hidden="false">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal"
+										aria-hidden="true">×</button>
+									<h3>Đăng nhập</h3>
+								</div>
+								<div class="modal-body">
+									<form class="form-horizontal loginFrm">
+										<div class="control-group">
+											<input type="text" id="inputEmail" placeholder="Email">
+										</div>
+										<div class="control-group">
+											<input type="password" id="inputPassword"
+												placeholder="Mật khẩu">
+										</div>
+										<div class="control-group">
+											<label class="checkbox"> <input type="checkbox">
+												Ghi nhớ
+											</label>
+										</div>
+									</form>
+									<button type="submit" class="btn btn-success">Đăng
+										nhập</button>
+									<button class="btn" data-dismiss="modal" aria-hidden="true">Đóng</button>
+								</div>
+							</div></li>
+					</c:if>
+					<c:if test="${not empty LoginInfo }">
+					<li class=""><a href='<c:url value="/dang-xuat"/>' role="button"
+						data-toggle="modal" style="padding-right: 0"> <span
+							class="btn btn-large btn-danger">Đăng xuất</span>
+					</a></li>
+					</c:if>
 				</ul>
 			</div>
 		</div>

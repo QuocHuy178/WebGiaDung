@@ -2,7 +2,10 @@ package giadung.Dao;
 
 import org.springframework.stereotype.Repository;
 
+import giadung.Entity.Products;
 import giadung.Entity.Users;
+import giadung.Mapper.MapperUsers;
+import giadung.Mapper.ProductsMapper;
 
 @Repository
 public class UsersDao extends BaseDao {
@@ -20,14 +23,21 @@ public class UsersDao extends BaseDao {
 		sql.append(") ");
 		sql.append("VALUES ");
 		sql.append("( ");
-		sql.append("   '"+user.getUser()+"', ");
-		sql.append("   '"+user.getPassword()+"', ");
-		sql.append("   '"+user.getDisplay_name()+"', ");
-		sql.append("   '"+user.getAddress()+"' ");
+		sql.append("   '" + user.getUser() + "', ");
+		sql.append("   '" + user.getPassword() + "', ");
+		sql.append("   '" + user.getDisplay_name() + "', ");
+		sql.append("   '" + user.getAddress() + "' ");
 		sql.append(")");
 
 		int insert = _jdbcTemplate.update(sql.toString());
 		return insert;
+	};
+
+	public Users GetUserByAcc(Users user) {
+		String sql = "SELECT * FROM users WHERE user = '" + user.getUser() + "'";
+		Users result = _jdbcTemplate.queryForObject(sql, new MapperUsers());
+
+		return result;
 	};
 
 }

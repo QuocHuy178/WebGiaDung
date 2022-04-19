@@ -1,56 +1,74 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/views/layouts/user/tablib.jsp"%>
 <body>
-	<%@include file="../layouts/user/slider.jsp"%>
 	<!-- Header End====================================================================== -->
 	<div id="mainBody">
 		<div class="container">
 			<div class="row">
 				<!-- Sidebar ================================================== -->
-				<%@include file="../layouts/user/sidebar.jsp"%>
+				<%@include file="../../layouts/user/sidebar.jsp"%>
 				<!-- Sidebar end=============================================== -->
 				<div class="span9">
 					<ul class="breadcrumb">
 						<li><a href="index">Trang chủ</a> <span class="divider">/</span></li>
 						<li class="active">Thanh toán</li>
 					</ul>
-					<h3>Thanh toÃ¡n</h3>
+					<h3>Thanh toán đơn hàng</h3>
 					<hr class="soft" />
-
-					<form class="form-horizontal">
+					<form:form action="checkout" method="POST" modelAttribute="bills"
+						class="form-horizontal">
 						<div class="control-group">
-							<label class="control-label" for="inputFname1">Há» tÃªn
+							<label class="control-label" for="inputFname1">Họ và tên
 								<sup>*</sup>
 							</label>
 							<div class="controls">
-								<input type="text" id="inputFname1" placeholder="Há» tÃªn">
+								<form:input type="text" class="span3"
+									placeholder="Nhập họ và tên của bạn" path="display_name" />
 							</div>
 						</div>
 						<div class="control-group">
-							<label class="control-label" for="input_phone"> Sá»
-								Äiá»n thoáº¡i <sup>*</sup>
+							<label class="control-label" for="input_phone">Email<sup>*</sup>
 							</label>
 							<div class="controls">
-								<input type="text" id="input_phone"
-									placeholder="Sá» Äiá»n thoáº¡i">
+								<form:input type="email" class="span3"
+									placeholder="Nhập số điện thoại của bạn" path="user" />
 							</div>
 						</div>
 						<div class="control-group">
-							<label class="control-label" for="input_phone"> Äá»a
-								chá» <sup>*</sup>
+							<label class="control-label" for="input_phone">Số điện
+								thoại<sup>*</sup>
 							</label>
 							<div class="controls">
-								<input type="text" id="input_phone" placeholder="Äá»a chá»">
+								<form:input type="text" class="span3"
+									placeholder="Nhập số điện thoại của bạn" path="phone" />
 							</div>
 						</div>
-						<table class="table table-bordered">
+						<div class="control-group">
+							<label class="control-label" for="input_phone">Địa chỉ<sup>*</sup>
+							</label>
+							<div class="controls">
+								<form:textarea type="text" class="span3"
+									placeholder="Nhập số địa chỉ của bạn" path="address" />
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="input_phone">Ghi chú</label>
+							<div class="controls">
+								<form:textarea type="text" class="span3"
+									placeholder="Nhập số địa chỉ của bạn" path="address" />
+							</div>
+						</div>
+						<!-- 						<table class="table table-bordered">
 							<thead>
 								<tr>
-									<th>Sáº£n pháº©m</th>
-									<th>MÃ´ táº£</th>
-									<th>Sá» lÆ°á»£ng</th>
-									<th>GiÃ¡</th>
-									<th>Tá»ng tiá»n sáº£n pháº©m</th>
-									<th>Giáº£m giÃ¡</th>
-									<th>Tá»ng cá»ng</th>
+									<th>Sản phẩm</th>
+									<th>Tên sản phẩm</th>
+									<th>Số lượng</th>
+									<th>Giá</th>
+									<th>Tạm tính</th>
+									<th>Giảm giá</th>
+									<th>Tổng cộng</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -104,38 +122,21 @@
 								</tr>
 
 								<tr>
-									<td colspan="6" style="text-align: right">Tá»ng tiá»n:</td>
-									<td>$228.00</td>
-								</tr>
-								<tr>
-									<td colspan="6" style="text-align: right">Tá»ng giáº£m
-										giÃ¡:</td>
-									<td>$50.00</td>
-								</tr>
-								<tr>
-									<td colspan="6" style="text-align: right">Tá»ng cá»ng:</td>
-									<td>$31.00</td>
-								</tr>
-								<tr>
-									<td colspan="6" style="text-align: right"><strong>Tá»ng
-											cá»ng =</strong></td>
+									<td colspan="6" style="text-align: right"><strong>TỔNG CỘNG =</strong></td>
 									<td class="label label-important" style="display: block">
 										<strong> $155.00 </strong>
 									</td>
 								</tr>
 							</tbody>
-						</table>
+						</table> -->
 
 						<div class="control-group pull-right">
 							<div class="controls">
-								<input type="hidden" name="email_create" value="1"> <input
-									type="hidden" name="is_new_customer" value="1"> <input
-									class="btn btn-large btn-success" type="submit"
-									value="Äáº·t hÃ ng" />
+								<button class="btn btn-large btn-success" type="submit"
+									value="Đặt hàng" />
 							</div>
 						</div>
-					</form>
-					<
+					</form:form>
 				</div>
 			</div>
 		</div>

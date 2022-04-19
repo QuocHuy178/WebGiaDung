@@ -17,7 +17,7 @@
 					</ul>
 					<h3>
 						Giỏ hàng [ <small> ${ TotalQuantyCart } sản phẩm </small>]<a
-							href="products" class="btn btn-large pull-right"><i
+							href='<c:url value="/product/"/>' class="btn btn-large pull-right"><i
 							class="icon-arrow-left"></i> Trở lại trang sản phẩm </a>
 					</h3>
 					<hr class="soft" />
@@ -31,7 +31,6 @@
 								<th>Số lượng</th>
 								<th>Chỉnh sửa</th>
 								<th>Giá</th>
-
 								<th>Tổng cộng</th>
 								<th>Xóa</th>
 							</tr>
@@ -68,10 +67,10 @@
 
 									<!-- nut delete -->
 									<td>
-										<button href="<c:url value="/DeleteCart/${item.key }"/>"
+										<a href="<c:url value="/DeleteCart/${item.key }"/>"
 											class="btn btn-danger" type="button">
 											<i class="icon-remove icon-white"></i>
-										</button>
+										</a>
 									</td>
 								</tr>
 							</c:forEach>
@@ -109,9 +108,9 @@
 					</table> -->
 
 
-					<button href="#login" class="btn btn-large pull-right btn-danger" type="button">Thanh toán <i
+					<a href='<c:url value="/checkout/"/>' class="btn btn-large pull-right btn-danger" type="button">Thanh toán <i
 						class="icon-arrow-right"></i>
-					</button>
+					</a>
 
 				</div>
 			</div>

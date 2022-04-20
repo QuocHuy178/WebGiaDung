@@ -33,4 +33,12 @@ public class CategoryDao extends BaseDao {
 		List<Products> listProducts = _jdbcTemplate.query(sql, new ProductsMapper());
 		return listProducts;
 	}
+
+	public Categories GetCategoryById(int id) {
+		// TODO Auto-generated method stub
+		String sql = "SELECT * From categories Where categories.id = "
+				+ id + "";
+		Categories category = _jdbcTemplate.queryForObject(sql, new CategoriesMapper());
+		return category;
+	}
 }

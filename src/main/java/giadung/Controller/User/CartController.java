@@ -82,7 +82,7 @@ public class CartController extends BaseController {
 	}
 
 	@RequestMapping(value = "checkout", method = RequestMethod.GET)
-	public ModelAndView CheckOut(HttpServletRequest request, HttpSession session) {
+	public ModelAndView CheckOut(HttpServletRequest request, HttpSession session) {	
 		_mvShare.setViewName("user/bills/checkout");
 		_mvShare.addObject("bills", new Bills());
 		Bills bills = new Bills();
@@ -92,20 +92,26 @@ public class CartController extends BaseController {
 			bills.setDisplay_name(loginInfo.getDisplay_name());
 			bills.setUser(loginInfo.getUser());
 		}
+		else {
+			_mvShare.setViewName("redirect:../dang-ky");
+		}
 		_mvShare.addObject("bills", bills);
 		return _mvShare;
 	}
 
 	@RequestMapping(value = "checkout", method = RequestMethod.POST)
-	public String CheckOutBill(HttpServletRequest request, HttpSession session, @ModelAttribute("bills") Bills bill) {
-		bill.setQuanty(Integer.parseInt((String) session.getAttribute("TotalPriceCart")));
-		bill.setTotal(Double.parseDouble((String) session.getAttribute("TotalQuantyCart")));
+	public ModelAndView CheckOutBill(HttpServletRequest request, HttpSession session, @ModelAttribute("bills") Bills bill) {
+		bill.setQuanty((int) session.getAttribute("TotalQuantyCart"));
+		bill.setTotal((double) session.getAttribute("TotalPriceCart"));
 		if (billService.AddBills(bill) > 0) {
 			HashMap<Long, Carts> carts = (HashMap<Long, Carts>) session.getAttribute("Cart");
 			billService.AddBillDetail(carts);
 		}
 		session.removeAttribute("Cart");
-		return "redirect:listcart";
+		session.removeAttribute("TotalQuantyCart");
+		session.removeAttribute("TotalPriceCart");
+		_mvShare.setViewName("user/bills/success");
+		return _mvShare;
 	}
 
 }

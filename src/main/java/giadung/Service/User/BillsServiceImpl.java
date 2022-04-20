@@ -28,7 +28,7 @@ public class BillsServiceImpl implements IBillService {
 
 		for (Map.Entry<Long, Carts> itemCart : carts.entrySet()) {
 			BillDetail billDetail = new BillDetail();
-			billDetail.setId(idBills);
+			billDetail.setId_bills(idBills);
 			billDetail.setId_product(itemCart.getValue().getProduct().getId());
 			billDetail.setQuanty(itemCart.getValue().getQuanty());
 			billDetail.setTotal(itemCart.getValue().getTotalPrice());

@@ -1,9 +1,14 @@
 package giadung.Dao;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import giadung.Entity.BillDetail;
 import giadung.Entity.Bills;
+import giadung.Entity.Categories;
+import giadung.Mapper.CategoriesMapper;
 
 @Repository
 public class BillsDao extends BaseDao {
@@ -24,6 +29,7 @@ public class BillsDao extends BaseDao {
 		sql.append("    " + bill.getQuanty() + ", ");
 		sql.append("    '" + bill.getNote() + "' ");
 		sql.append(");");
+//		String sql = "INSERT INTO bills VALUES "+""+bill.getUser()+","+bill.getPhone()+","+bill.getDisplay_name()+","+ bill.getAddress()+","+bill.getTotal()+","+bill.getQuanty()+","+bill.getNote()+"";
 		int insert = _jdbcTemplate.update(sql.toString());
 		return insert;
 	};
@@ -31,7 +37,7 @@ public class BillsDao extends BaseDao {
 	public long GetIDLastBills() { // sau khi insert bill -> lay id lon nhat
 		StringBuffer sql = new StringBuffer();
 		sql.append("SELECT MAX(id) FROM bills;");
-		long id = _jdbcTemplate.queryForObject(sql.toString(), new Object[] {}, Long.class);
+		long id = _jdbcTemplate.queryForObject(sql.toString(), Long.class);
 		return id;
 	};
 
@@ -49,7 +55,7 @@ public class BillsDao extends BaseDao {
 		sql.append("   " + billDetail.getId_product() + ", "); // email
 		sql.append("   " + billDetail.getId_bills() + ", "); // email
 		sql.append("   " + billDetail.getQuanty() + ", ");
-		sql.append("   " + billDetail.getTotal() + ", ");
+		sql.append("   " + billDetail.getTotal());
 		sql.append(")");
 		int insert = _jdbcTemplate.update(sql.toString());
 		return insert;

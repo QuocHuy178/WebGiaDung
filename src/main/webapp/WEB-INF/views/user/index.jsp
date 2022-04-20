@@ -55,7 +55,7 @@
 														<a href='<c:url value="/product-details/${ item.id }"/>'><img class="slider"
 															src="themes/images/products/${ item.image }" alt=""></a>
 														<div class="caption">
-															<h5>${ item.name }</h5>
+															<h5 class="text-1-line ">${ item.name }</h5>
 															<h4 class="text-center flex-column">
 																<span class="pull-right text-warning"><fmt:formatNumber
 																		type="number" groupingUsed="true"
@@ -89,7 +89,7 @@
 												alt="image_products" />
 											</a>
 											<div class="caption">
-												<h5>${ item.name }</h5>
+												<h5 class="text-1-line ">${ item.name }</h5>
 												<h4 style="text-align: center">
 													<div class="text-success">
 														<fmt:formatNumber type="number" groupingUsed="true"

@@ -17,8 +17,9 @@
 					</ul>
 					<h3>
 						Giỏ hàng [ <small> ${ TotalQuantyCart } sản phẩm </small>]<a
-							href='<c:url value="/product/"/>' class="btn btn-large pull-right"><i
-							class="icon-arrow-left"></i> Trở lại trang sản phẩm </a>
+							href='<c:url value="/product/"/>'
+							class="btn btn-large pull-right"><i class="icon-arrow-left"></i>
+							Trở lại trang sản phẩm </a>
 					</h3>
 					<hr class="soft" />
 
@@ -45,7 +46,7 @@
 									<td>${ item.value.product.name }</td>
 
 									<!-- input so luong -->
-									<td><input class="span1" style="max-width:34px"
+									<td><input class="span1" style="max-width: 34px"
 										type="number" value="${ item.value.quanty }" min="0"
 										max="1000" placeholder="1" id="quanty-cart-${item.key }">
 
@@ -66,12 +67,10 @@
 									</td>
 
 									<!-- nut delete -->
-									<td>
-										<a href="<c:url value="/DeleteCart/${item.key }"/>"
-											class="btn btn-danger" type="button">
-											<i class="icon-remove icon-white"></i>
-										</a>
-									</td>
+									<td><a href="<c:url value="/DeleteCart/${item.key }"/>"
+										class="btn btn-danger" type="button"> <i
+											class="icon-remove icon-white"></i>
+									</a></td>
 								</tr>
 							</c:forEach>
 
@@ -106,11 +105,21 @@
 
 						</tbody>
 					</table> -->
+					<c:choose>
+						<c:when test="${not empty LoginInfo }">
+							<a href='<c:url value="/checkout/"/>'
+								class="btn btn-large pull-right btn-danger" type="button">Thanh
+								toán <i class="icon-arrow-right"></i>
+							</a>
+						</c:when>
+						<c:otherwise>
+							<a href='<c:url value="/dang-ky/"/>'
+								class="btn btn-large pull-right btn-danger" type="button">Thanh
+								toán <i class="icon-arrow-right"></i>
+							</a>
+  						</c:otherwise>
+					</c:choose>
 
-
-					<a href='<c:url value="/checkout/"/>' class="btn btn-large pull-right btn-danger" type="button">Thanh toán <i
-						class="icon-arrow-right"></i>
-					</a>
 
 				</div>
 			</div>
@@ -123,8 +132,8 @@
 		$(".edit-card").on("click", function() {
 			var id = $(this).data("id");
 			var quanty = $("#quanty-cart-" + id).val();
-/* 			alert(quanty); */
-			window.location = "EditCart/"+id+"/"+quanty;
+			/* 			alert(quanty); */
+			window.location = "EditCart/" + id + "/" + quanty;
 		});
 	</script> </content>
 </body>

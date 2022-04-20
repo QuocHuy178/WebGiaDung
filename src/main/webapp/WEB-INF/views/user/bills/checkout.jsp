@@ -16,7 +16,7 @@
 					</ul>
 					<h3>Thanh toán đơn hàng</h3>
 					<hr class="soft" />
-					<form:form action="checkout" method="POST" modelAttribute="bills"
+					<form:form method="POST" modelAttribute="bills"
 						class="form-horizontal">
 						<div class="control-group">
 							<label class="control-label" for="inputFname1">Họ và tên
@@ -56,7 +56,7 @@
 							<label class="control-label" for="input_phone">Ghi chú</label>
 							<div class="controls">
 								<form:textarea type="text" class="span3"
-									placeholder="Nhập số địa chỉ của bạn" path="address" />
+									placeholder="Nhập số địa chỉ của bạn" path="note" />
 							</div>
 						</div>
 						<!-- 						<table class="table table-bordered">
@@ -132,7 +132,7 @@
 
 						<div class="control-group pull-right">
 							<div class="controls">
-								<button class="btn btn-large btn-success" type="submit"
+								<input  class="btn btn-large btn-success" type="submit"
 									value="Đặt hàng" />
 							</div>
 						</div>

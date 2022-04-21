@@ -11,7 +11,7 @@ import giadung.Entity.Bills;
 
 @Service
 public interface AdminIBillService {
-	public BillDetail GetBillById(long id);
+	public List<BillDetail> GetBillById(long id);
 	
 	public List<Bills> GetAllBill();
 	

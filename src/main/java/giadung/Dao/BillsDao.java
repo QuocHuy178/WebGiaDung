@@ -72,11 +72,11 @@ public class BillsDao extends BaseDao {
 		return listBills;
 	}
 
-	public BillDetail GetBillById(long id) {
+	public List<BillDetail> GetBillById(long id) {
 		// TODO Auto-generated method stub
 		String sql = "SELECT * From billdetail Where billdetail.id_bills = "
 				+ id + "";
-		BillDetail billdetail = _jdbcTemplate.queryForObject(sql, new BillDetailMapper());
+		List<BillDetail> billdetail = _jdbcTemplate.query(sql, new BillDetailMapper());
 		return billdetail;
 	}
 

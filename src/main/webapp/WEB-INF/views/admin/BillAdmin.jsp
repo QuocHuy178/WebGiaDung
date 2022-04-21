@@ -59,7 +59,8 @@
 															value=" ${ item.total }" /> đ
                         </td>
                         <td>
-                          <a href="<c:url value="./BillDetail/${ item.id }"/>">Xem</a>
+                          <a href="<c:url value="./BillDetail/${ item.id }"/>">Xem</a> |
+                           <a href="?cateid=<?php echo $result['cateId'] ?>">Xóa</a>
                         </td>
                       </tr>
                   </c:forEach>

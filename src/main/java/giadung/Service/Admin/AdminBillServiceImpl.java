@@ -20,9 +20,9 @@ public class AdminBillServiceImpl implements AdminIBillService {
 	BillsDao billsDao = new BillsDao();
 	
 	@Override
-	public BillDetail GetBillById(long id) {
+	public List<BillDetail> GetBillById(long id) {
 		// TODO Auto-generated method stub
-		BillDetail billdetail = billsDao.GetBillById(id);
+		List<BillDetail> billdetail = billsDao.GetBillById(id);
 
 		return billdetail;
 	}

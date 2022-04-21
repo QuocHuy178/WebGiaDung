@@ -14,9 +14,7 @@
                 <div class="table-responsive">
                   <table class="table">
                     <thead class=" text-primary">
-                      <th>
-                        Id Bill
-                      </th>
+                  
                       <th>
                         Id Sản phẩm
                       </th>
@@ -29,24 +27,22 @@
                   
                     </thead>
                     <tbody>
-          			
+          			<c:forEach var="item" items="${ billsdetail }">
                       <tr>
+                      
                         <td>
-                          ${ billsdetail.id_bills }
+                        ${ item.id_product }
                         </td>
                         <td>
-                        ${ billsdetail.id_product }
-                        </td>
-                        <td>
-                        ${ billsdetail.quanty }
+                        ${ item.quanty }
                         </td>
                         <td>
                         <fmt:formatNumber type="number" groupingUsed="true"
-															value="${ billsdetail.total }" /> đ
+															value="${ item.total }" /> đ
                         </td>
                        
                       </tr>
-                 
+                   </c:forEach>
                     </tbody>
                   </table>
                 </div>

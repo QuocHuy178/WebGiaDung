@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
 
+import giadung.Service.Admin.AdminBillServiceImpl;
 import giadung.Service.Admin.AdminHomeServiceImpl;
 import giadung.Service.Admin.AdminProductServiceImpl;
 import giadung.Service.User.CategoryServiceImpl;
@@ -20,6 +21,8 @@ public class BaseControllerAdmin {
 	AdminHomeServiceImpl _homeService;
 	@Autowired
 	AdminProductServiceImpl _productService;
+	@Autowired
+	AdminBillServiceImpl _billsService;
 	
 	public ModelAndView _mvShare = new ModelAndView();
 	

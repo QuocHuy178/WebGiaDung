@@ -10,18 +10,18 @@ import giadung.Entity.PaginatesDto;
 
 
 @Controller
-public class AdminProductController extends BaseControllerAdmin {
-	@RequestMapping(value = { "/admin/ProductAdmin" })
+public class AdminBillController extends BaseControllerAdmin {
+	@RequestMapping(value = { "/admin/BillAdmin" })
 	public ModelAndView Index() {
-		_mvShare.addObject("proadmin", _productService.GetAllProduct());
-		_mvShare.setViewName("admin/ProductAdmin");
+		_mvShare.addObject("billadmin", _billsService.GetAllBill());
+		_mvShare.setViewName("admin/BillAdmin");
 		return _mvShare;
 	}
 	
-	@RequestMapping(value = { "/admin/EditProduct/{id}" })
+	@RequestMapping(value = { "/admin/BillDetail/{id}" })
 	public ModelAndView Index(@PathVariable long id) {
-		_mvShare.addObject("product", _productService.GetProductById(id));
-		_mvShare.setViewName("admin/EditProduct");
+		_mvShare.addObject("billsdetail", _billsService.GetBillById(id));
+		_mvShare.setViewName("admin/BillDetail");
 
 		return _mvShare;
 	}

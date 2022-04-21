@@ -30,9 +30,9 @@
           </li>
 
           <li>
-            <a href="./categoryadmin.php">
+            <a href="/giadung/admin/BillAdmin">
               <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Danh mục</p>
+              <p>Hóa Đơn</p>
             </a>
           </li>
         </ul>

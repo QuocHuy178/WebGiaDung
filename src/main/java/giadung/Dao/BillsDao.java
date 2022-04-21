@@ -8,7 +8,11 @@ import org.springframework.stereotype.Repository;
 import giadung.Entity.BillDetail;
 import giadung.Entity.Bills;
 import giadung.Entity.Categories;
+import giadung.Entity.Products;
+import giadung.Mapper.BillDetailMapper;
+import giadung.Mapper.BillsMapper;
 import giadung.Mapper.CategoriesMapper;
+import giadung.Mapper.ProductsMapper;
 
 @Repository
 public class BillsDao extends BaseDao {
@@ -59,5 +63,22 @@ public class BillsDao extends BaseDao {
 		sql.append(")");
 		int insert = _jdbcTemplate.update(sql.toString());
 		return insert;
-	};
+	}
+
+	public List<Bills> GetAllBill() {
+		// TODO Auto-generated method stub
+		String sql = "SELECT * FROM bills ";
+		List<Bills> listBills = _jdbcTemplate.query(sql, new BillsMapper());
+		return listBills;
+	}
+
+	public BillDetail GetBillById(long id) {
+		// TODO Auto-generated method stub
+		String sql = "SELECT * From billdetail Where billdetail.id_bills = "
+				+ id + "";
+		BillDetail billdetail = _jdbcTemplate.queryForObject(sql, new BillDetailMapper());
+		return billdetail;
+	}
+
+
 }

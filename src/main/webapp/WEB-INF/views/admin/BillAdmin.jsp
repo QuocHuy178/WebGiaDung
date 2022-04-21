@@ -1,13 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@include file="/WEB-INF/views/layouts/user/tablib.jsp"%>
-
+<!DOCTYPE html>
+<html>
+<head>
 <title>Insert title here</title>
 </head>
 <body>
- <a class="navbar-brand" href="./categoryadd.php">Thêm sản phẩm</a>
 <div class="card-header">
-                <h4 class="card-title"> Sản phẩm</h4>
+                <h4 class="card-title"> Hóa đơn</h4>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
@@ -17,37 +18,48 @@
                         Id
                       </th>
                       <th>
-                        Tên Sản Phẩm
-                      </th>
-                       <th>
-                        Giá
-                      </th>
-                       <th>
-                        Hình
+                        User
                       </th>
                       <th>
-                        Action
+                        Địa chỉ
+                      </th>
+                       <th>
+                        SĐT
+                      </th>
+                      <th>
+                        Số lượng
+                      </th>
+                       <th>
+                        Tổng tiền
+                      </th>
+                        <th>
+                        Tùy chọn
                       </th>
                     </thead>
                     <tbody>
-          			<c:forEach var="item" items="${ proadmin }">
+          			<c:forEach var="item" items="${ billadmin }">
                       <tr>
                         <td>
                           ${ item.id }
                         </td>
                         <td>
-                        ${ item.name }
-                        </td>
-                         <td>
-                        	<fmt:formatNumber type="number" groupingUsed="true"
-															value="${ item.price }" /> đ
-                        </td>
-                         <td>
-                        	<img style="height:100px;width:100px;object-fit:cover" alt="" src="<c:url value="/"/>themes/images/products/${ item.image }">
+                        ${ item.user }
                         </td>
                         <td>
-                          <a href="<c:url value="./EditProduct/${ item.id }"/>">edit</a> |
-                          <a href="?cateid=<?php echo $result['cateId'] ?>">delete</a>
+                        ${ item.address }
+                        </td>
+                        <td>
+                        ${ item.phone }
+                        </td>
+                        <td>
+                        ${ item.quanty }
+                        </td>
+                        <td>
+                       	<fmt:formatNumber type="number" groupingUsed="true"
+															value=" ${ item.total }" /> đ
+                        </td>
+                        <td>
+                          <a href="<c:url value="./BillDetail/${ item.id }"/>">Xem</a>
                         </td>
                       </tr>
                   </c:forEach>

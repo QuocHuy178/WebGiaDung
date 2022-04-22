@@ -11,7 +11,7 @@
 			</div>
 			<div class="span3">
 				<h5>Thông tin</h5>
-				<a href="contact">Liên hệ</a> <a href="register">Đăng ký</a>
+				<a href="contact">Liên hệ</a> <a href="dang-ky">Đăng ký</a>
 			</div>
 			<div class="span3">
 				<h5>Cửa hàng</h5>

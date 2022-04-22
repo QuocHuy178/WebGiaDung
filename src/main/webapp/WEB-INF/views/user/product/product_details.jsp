@@ -68,8 +68,8 @@
 							<ul id="productDetail" class="nav nav-tabs">
 								<li class="active"><a href="#home" data-toggle="tab">Chi
 										tiết sản phẩm</a></li>
-								<li><a href="#profile" data-toggle="tab">Sản phẩm tương
-										tự</a></li>
+								<!-- <li><a href="#profile" data-toggle="tab">Sản phẩm tương
+										tự</a></li> -->
 							</ul>
 							<div id="myTabContent" class="tab-content">
 								<div class="tab-pane fade active in" id="home">

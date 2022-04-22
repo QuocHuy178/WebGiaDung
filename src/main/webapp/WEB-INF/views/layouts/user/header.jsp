@@ -12,10 +12,24 @@
 
 			<div class="span6">
 				<div class="pull-right">
-					<a href="<c:url value="/listcart"/>"><span
-						class="btn btn-mini btn-primary"><i
-							class="icon-shopping-cart icon-white"></i> ${ TotalQuantyCart }
-							sản phẩm trong giỏ hàng </span> </a>
+					<c:choose>
+						<c:when test="${not empty TotalQuantyCart }">
+							<a href="<c:url value="/listcart"/>"> <span
+								class="btn btn-mini btn-primary"> <i
+									class="icon-shopping-cart icon-white"></i> ${ TotalQuantyCart }
+									sản phẩm trong giỏ hàng
+							</span>
+							</a>
+						</c:when>
+						<c:otherwise>
+							<a href="<c:url value="/listcart"/>"> <span
+								class="btn btn-mini btn-primary"> <i
+									class="icon-shopping-cart icon-white"></i> 0 sản phẩm trong giỏ
+									hàng
+							</span>
+							</a>
+						</c:otherwise>
+					</c:choose>
 				</div>
 			</div>
 		</div>
@@ -46,7 +60,7 @@
 				<ul id="topMenu" class="nav pull-right">
 
 					<li class=""><a href='<c:url value="/product"/>'>Sản phẩm</a></li>
-					<li class=""><a href="normal">Đặt hàng</a></li>
+					<li class=""><a href="listcart">Đặt hàng</a></li>
 					<li class=""><a href="contact">Liên hệ</a></li>
 					<c:if test="${empty LoginInfo }">
 						<li class=""><a href='<c:url value="/dang-ky"/>'
@@ -82,10 +96,10 @@
 							</div></li>
 					</c:if>
 					<c:if test="${not empty LoginInfo }">
-					<li class=""><a href='<c:url value="/dang-xuat"/>' role="button"
-						data-toggle="modal" style="padding-right: 0"> <span
-							class="btn btn-large btn-danger">Đăng xuất</span>
-					</a></li>
+						<li class=""><a href='<c:url value="/dang-xuat"/>'
+							role="button" data-toggle="modal" style="padding-right: 0"> <span
+								class="btn btn-large btn-danger">Đăng xuất</span>
+						</a></li>
 					</c:if>
 				</ul>
 			</div>

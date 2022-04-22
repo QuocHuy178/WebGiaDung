@@ -23,7 +23,7 @@ public class BaseController {
 	@Autowired
 	PaginatesServiceImpl _paginateService;
 	
-	public int _totalProductPerPage = 9;
+	public int _totalProductPerPage = 6;
 	
 	public ModelAndView _mvShare = new ModelAndView();
 	
